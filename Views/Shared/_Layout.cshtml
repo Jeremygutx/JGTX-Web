@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1" />
+
+    <title>
+        @ViewData["Title"] - JGTX Tech
+    </title>
+
+    @{
+        const string defaultDescription =
+            "JGTX Tech: ingeniería digital, IA y soluciones tecnológicas en Perú. " +
+            "Diseñamos, desarrollamos y automatizamos productos digitales que convierten ideas en realidad.";
+
+        var pageDescription = (string?)ViewData["Description"];
+        var metaDescription =
+            string.IsNullOrWhiteSpace(pageDescription)
+                ? defaultDescription
+                : pageDescription;
+
+        var siteUrl = $"{Context.Request.Scheme}://{Context.Request.Host}";
+        var canonicalUrl = $"{siteUrl}{Context.Request.Path}{Context.Request.QueryString}";
+        var ogImage = $"{siteUrl}/img/hero/hero-background.jpg";
+    }
+
+    <!-- SEO -->
+    <meta name="description" content="@metaDescription" />
+    <meta name="author" content="JGTX Tech" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#05070D" />
+
+    <link rel="canonical" href="@canonicalUrl" />
+    <link rel="icon" href="~/favicon.ico" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="JGTX Tech" />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:title" content="@ViewData["Title"] - JGTX Tech" />
+    <meta property="og:description" content="@metaDescription" />
+    <meta property="og:url" content="@canonicalUrl" />
+    <meta property="og:image" content="@ogImage" />
+    <meta property="og:image:alt" content="JGTX Tech - Ingeniería digital e IA" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="@ViewData["Title"] - JGTX Tech" />
+    <meta name="twitter:description" content="@metaDescription" />
+    <meta name="twitter:image" content="@ogImage" />
+
+    <!-- Datos estructurados -->
+    <script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "Organization",
+      "name": "JGTX Tech",
+      "url": "@siteUrl",
+      "description": "@metaDescription",
+      "logo": "@ogImage",
+      "sameAs": [
+        "https://www.instagram.com/jgtx.tech/",
+        "https://www.tiktok.com/@@jgtx.tech",
+        "https://www.facebook.com/jgtx.tech",
+        "https://www.youtube.com/@@jgtx.tech"
+      ],
+      "contactPoint": {
+        "@@type": "ContactPoint",
+        "contactType": "customer service",
+        "areaServed": "PE",
+        "availableLanguage": "Spanish"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "ProfessionalService",
+      "name": "JGTX Tech",
+      "description": "Servicios de ingeniería digital: desarrollo web, aplicaciones, inteligencia artificial, automatización, forense digital y transformación digital.",
+      "url": "@siteUrl",
+      "image": "@ogImage",
+      "telephone": "+51999999999",
+      "address": {
+        "@@type": "PostalAddress",
+        "addressCountry": "PE",
+        "addressRegion": "Lima"
+      },
+      "priceRange": "$$",
+      "areaServed": "PE",
+      "openingHours": "Mo-Su 00:00-24:00"
+    }
+    </script>
+
+    <!-- Recursos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- CSS GLOBAL -->
+    <link rel="stylesheet" href="~/css/variables.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/navbar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/home-sections.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/footer.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/animations.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/toast.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/chat-widget.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/responsive.css" asp-append-version="true" />
+
+    <!-- CSS DE PÁGINA -->
+    @await RenderSectionAsync("Styles", required: false)
+
+</head>
+
+
+<body>
+
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+
+    <!-- NAVBAR GLOBAL -->
+    @await Html.PartialAsync(
+      "Components/_Navbar"
+  )
+
+    @await Html.PartialAsync(
+        "Components/_Toast"
+    )
+
+
+    <!-- CONTENIDO DE LA PÁGINA -->
+
+    <main id="main-content">
+
+        @RenderBody()
+
+    </main>
+
+
+    <!-- FOOTER GLOBAL -->
+    @await Html.PartialAsync(
+            "Components/_Footer"
+        )
+
+
+    <!-- SCRIPTS -->
+
+    <script src="~/js/main.js"
+            asp-append-version="true">
+    </script>
+
+    <script src="~/js/navbar.js"
+            asp-append-version="true">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+    <script src="~/js/animations.js"
+            asp-append-version="true">
+    </script>
+
+    <script src="~/js/toast.js"
+            asp-append-version="true">
+    </script>
+
+    <script src="~/js/newsletter.js"
+            asp-append-version="true">
+    </script>
+
+    <script src="~/js/chat-widget.js"
+            asp-append-version="true">
+    </script>
+
+
+    @await RenderSectionAsync(
+        "Scripts",
+        required: false
+    )
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+@{
+    ViewData["Title"] = "Reseñas";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/reviews.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/circuit.css" asp-append-version="true" />
+}
+
+<section class="reviews-page" id="reviewsPage">
+    <div class="circuit-page-bg">
+        @await Html.PartialAsync("Components/_CircuitBackground")
+    </div>
+    <div class="circuit-page-content">
+    <div class="reviews-page-glow reviews-page-glow-one" aria-hidden="true"></div>
+    <div class="reviews-page-glow reviews-page-glow-two" aria-hidden="true"></div>
+
+    <header class="reviews-page-hero">
+        <div class="reviews-page-meta">
+            <span>JGTX TECH / RESEÑAS</span>
+            <span><i></i> LO QUE DICEN</span>
+        </div>
+
+        <div class="reviews-page-heading">
+            <span class="reviews-page-kicker">TESTIMONIOS DE CLIENTES</span>
+            <h1>Reseñas</h1>
+        </div>
+
+        <div class="reviews-page-scroll" aria-hidden="true">
+            <span>SCROLL PARA EXPLORAR</span>
+            <i class="fa-solid fa-arrow-down"></i>
+        </div>
+    </header>
+
+    <section class="reviews-summary" id="reviewsSummary">
+        <div class="reviews-summary-rating">
+            <b>5.0</b>
+            <span class="reviews-summary-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+            <small>VALORACIÓN PROMEDIO</small>
+        </div>
+        <div class="reviews-stat"><b>+12</b><span>RESEÑAS DE CLIENTES</span></div>
+        <div class="reviews-stat"><b>100%</b><span>RECOMIENDAN JGTX</span></div>
+        <div class="reviews-stat"><b>5 ESTRELLAS</b><span>EN TODOS LOS PROYECTOS</span></div>
+    </section>
+
+    <section class="reviews-grid" id="reviewsGrid">
+        <article class="review-card" data-review-card>
+            <span class="review-card-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+            <p class="review-card-text">"El mejor desarrollo web que hemos contratado. Rápidos, claros y con un resultado impecable."</p>
+            <span class="review-card-user"><b class="review-card-ava">DR</b><span><b>Diego Ramírez</b><small>Empresario · Lima</small></span></span>
+            <span class="review-card-tag">DESARROLLO WEB</span>
+        </article>
+
+        <article class="review-card" data-review-card>
+            <span class="review-card-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+            <p class="review-card-text">"Mi tienda creció un 200% en 3 meses gracias a la plataforma que construyeron para nosotros."</p>
+            <span class="review-card-user"><b class="review-card-ava">VM</b><span><b>Valeria Mendoza</b><small>Emprendedora · Arequipa</small></span></span>
+            <span class="review-card-tag">E-COMMERCE</span>
+        </article>
+
+        <article class="review-card" data-review-card>
+            <span class="review-card-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+            <p class="review-card-text">"Atentos, rápidos y muy profesionales. Explican todo en simple y entregan a tiempo."</p>
+            <span class="review-card-user"><b class="review-card-ava">CT</b><span><b>Carlos Torres</b><small>Gerente · Trujillo</small></span></span>
+            <span class="review-card-tag">SOPORTE</span>
+        </article>
+
+        <article class="review-card" data-review-card>
+            <span class="review-card-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+            <p class="review-card-text">"Nos automatizaron todo el proceso de ventas. Hoy ahorramos horas de trabajo al día."</p>
+            <span class="review-card-user"><b class="review-card-ava">AG</b><span><b>Andrea García</b><small>Operaciones · Lima</small></span></span>
+            <span class="review-card-tag">AUTOMATIZACIÓN</span>
+        </article>
+
+        <article class="review-card" data-review-card>
+            <span class="review-card-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+            <p class="review-card-text">"La IA de atención responde todo de inmediato y nuestros clientes encantan."</p>
+            <span class="review-card-user"><b class="review-card-ava">LF</b><span><b>Luis Fernández</b><small>Retail · Cusco</small></span></span>
+            <span class="review-card-tag">INTELIGENCIA</span>
+        </article>
+
+        <article class="review-card" data-review-card>
+            <span class="review-card-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+            <p class="review-card-text">"Soporte y calidad en cada entrega. Recomiendo JGTX sin dudarlo."</p>
+            <span class="review-card-user"><b class="review-card-ava">MC</b><span><b>María del Carmen</b><small>Dueña de negocio · Chiclayo</small></span></span>
+            <span class="review-card-tag">WEB</span>
+        </article>
+
+        <article class="review-card" data-review-card>
+            <span class="review-card-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+            <p class="review-card-text">"El informe forense que nos entregaron fue claro y nos dio certeza para decidir."</p>
+            <span class="review-card-user"><b class="review-card-ava">RS</b><span><b>Renato Salas</b><small>Abogado · Lima</small></span></span>
+            <span class="review-card-tag">FORENSE DIGITAL</span>
+        </article>
+
+        <article class="review-card" data-review-card>
+            <span class="review-card-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+            <p class="review-card-text">"Modernizaron toda nuestra operación. Procesos que tardaban días ahora toman minutos."</p>
+            <span class="review-card-user"><b class="review-card-ava">PO</b><span><b>Paola Ortiz</b><small>Directora · Piura</small></span></span>
+            <span class="review-card-tag">TRANSFORMACIÓN</span>
+        </article>
+
+        <article class="review-card" data-review-card>
+            <span class="review-card-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+            <p class="review-card-text">"La app que nos hicieron funciona perfecto. Comunicación clara en todo el proyecto."</p>
+            <span class="review-card-user"><b class="review-card-ava">JH</b><span><b>José Huamán</b><small>Gerente de TI · Huancayo</small></span></span>
+            <span class="review-card-tag">APLICACIONES</span>
+        </article>
+    </section>
+
+    <section class="reviews-cta">
+        <div>
+            <span class="reviews-page-kicker">JGTX TECH</span>
+            <h2>¿Quieres resultados<br /><span>así de buenos?</span></h2>
+        </div>
+        <div class="reviews-cta-actions">
+            <a asp-controller="Home" asp-action="Contact" class="reviews-primary-btn">COMENZAR PROYECTO <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="https://wa.me/51999999999?text=Hola%2C%20quiero%20hablar%20de%20un%20proyecto%20JGTX." target="_blank" rel="noopener noreferrer" class="reviews-wa-btn"><i class="fa-brands fa-whatsapp"></i> WHATSAPP</a>
+        </div>
+    </section>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('[data-review-card]');
+            if (cards.length && 'IntersectionObserver' in window &&
+                !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                const io = new IntersectionObserver((entries) => {
+                    entries.forEach((entry, idx) => {
+                        if (!entry.isIntersecting) return;
+                        const el = entry.target;
+                        setTimeout(() => { el.classList.add('is-visible'); }, idx * 80);
+                        io.unobserve(el);
+                    });
+                }, { threshold: 0.12 });
+                cards.forEach(c => io.observe(c));
+            } else {
+                cards.forEach(c => c.classList.add('is-visible'));
+            }
+        });
+    </script>
+}

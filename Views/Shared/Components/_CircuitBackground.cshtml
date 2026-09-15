@@ -1,0 +1,90 @@
+@*
+    Fondo animado de circuitos neon (negro profundo + rojo).
+    Usa variables CSS --cb-* para ajustar el color por página.
+*@
+<svg class="circuit-svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+    <defs>
+        <filter id="circuitGlow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="4.5" result="blur" />
+            <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+        </filter>
+        <filter id="bigBlur" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="85" />
+        </filter>
+        <radialGradient id="redA" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="var(--cb-glow, #ff174f)" stop-opacity=".55" />
+            <stop offset="100%" stop-color="var(--cb-glow, #ff174f)" stop-opacity="0" />
+        </radialGradient>
+        <radialGradient id="pulseGrad">
+            <stop offset="0%" stop-color="var(--cb-a, #ff4d78)" stop-opacity="0" />
+            <stop offset="35%" stop-color="var(--cb-hot, #ffffff)" stop-opacity=".95" />
+            <stop offset="60%" stop-color="var(--cb-core, #ff174f)" stop-opacity=".9" />
+            <stop offset="100%" stop-color="var(--cb-core, #ff174f)" stop-opacity="0" />
+        </radialGradient>
+    </defs>
+
+    <circle cx="260" cy="240" r="340" fill="url(#redA)" opacity=".45" filter="url(#bigBlur)" />
+    <circle cx="1680" cy="880" r="400" fill="url(#redA)" opacity=".35" filter="url(#bigBlur)" />
+    <circle cx="1100" cy="520" r="300" fill="url(#redA)" opacity=".25" filter="url(#bigBlur)" />
+
+    <g class="circuit-wire" fill="none" stroke="var(--cb-wire, rgba(255,23,79,.16))" stroke-width="1">
+        <path d="M80 120 H400 V260 H760 V120 H1080" />
+        <path d="M1080 120 H1500 V300 H1840" />
+        <path d="M1340 300 V180 H1500" />
+        <path d="M400 260 V420 H760" />
+        <path d="M80 360 H260 V560 H600 V420 H900 V560" />
+        <path d="M900 560 H1240 V360 H1500 V560 H1740 V400 H1840" />
+        <path d="M80 640 H360 V820 H660 V700 H960 V860 H1240" />
+        <path d="M1240 860 V700 H1560 V900 H1840" />
+        <path d="M960 700 V540 H1240" />
+        <path d="M80 940 H340 V1040 H680 V940 H980 V1040" />
+        <path d="M980 940 H1300 V1040 H1700 V940 H1840" />
+        <path d="M360 820 V560" />
+        <path d="M760 420 V560" />
+        <path d="M1500 560 V700" />
+        <rect x="640" y="40" width="320" height="180" rx="90" />
+        <rect x="240" y="680" width="280" height="220" rx="100" />
+        <rect x="1560" y="600" width="240" height="220" rx="100" />
+        <path d="M1040 120 V300" />
+    </g>
+
+    <g class="circuit-pulse" stroke="url(#pulseGrad)" stroke-linecap="round" fill="none">
+        <path id="cp1" d="M80 360 H260 V560 H600 V420 H900" stroke-width="3.5" stroke-dasharray="70 380" style="animation-duration:7.5s" />
+        <path id="cp2" d="M1840 300 H1500 V360 H1240 V560 H900" stroke-width="3" stroke-dasharray="55 395" style="animation-duration:9s;animation-direction:reverse" />
+        <path id="cp3" d="M360 820 V640 H960 V540 H1240" stroke-width="3.5" stroke-dasharray="80 370" style="animation-duration:8.5s;animation-delay:-3s" />
+        <path id="cp4" d="M1500 900 V700 H1560 V600" stroke-width="2.8" stroke-dasharray="50 400" style="animation-duration:7s;animation-direction:reverse;animation-delay:-1.5s" />
+        <path id="cp5" d="M80 120 H400 V260 H760 V120 H1080 V300 H1500" stroke-width="3" stroke-dasharray="65 385" style="animation-duration:11s;animation-delay:-6s" />
+        <path id="cp6" d="M1040 120 V300 H1500" stroke-width="2.8" stroke-dasharray="45 405" style="animation-duration:6s;animation-delay:-2s" />
+    </g>
+
+    <g class="circuit-node">
+        <circle cx="260" cy="560" r="3" />
+        <circle cx="600" cy="420" r="2.6" />
+        <circle cx="900" cy="560" r="3.2" style="animation-delay:.8s" />
+        <circle cx="1240" cy="360" r="2.6" style="animation-delay:1.4s" />
+        <circle cx="1500" cy="560" r="3" style="animation-delay:2.1s" />
+        <circle cx="360" cy="820" r="2.8" style="animation-delay:.4s" />
+        <circle cx="960" cy="860" r="3.1" style="animation-delay:1.8s" />
+        <circle cx="1560" cy="900" r="2.8" style="animation-delay:2.6s" />
+        <circle cx="400" cy="260" r="2.5" style="animation-delay:3s" />
+        <circle cx="1240" cy="560" r="2.6" style="animation-delay:.2s" />
+    </g>
+
+    <g class="about-particle" style="--cb-core:var(--cb-core,#ff174f);--cb-hot:var(--cb-hot,#ffffff)">
+        <circle r="2.4" fill="var(--cb-a, #ff5a80)" opacity=".85">
+            <animateMotion dur="26s" repeatCount="indefinite" begin="-4s" rotate="0"><mpath href="#cp1" /></animateMotion>
+        </circle>
+        <circle r="1.8" fill="#ffffff" opacity=".8">
+            <animateMotion dur="30s" repeatCount="indefinite" begin="-12s" rotate="0"><mpath href="#cp2" /></animateMotion>
+        </circle>
+        <circle r="2.2" fill="var(--cb-core, #ff174f)" opacity=".9">
+            <animateMotion dur="24s" repeatCount="indefinite" begin="-8s" rotate="0"><mpath href="#cp3" /></animateMotion>
+        </circle>
+        <circle r="1.6" fill="#ffffff" opacity=".7">
+            <animateMotion dur="20s" repeatCount="indefinite" begin="-16s" rotate="0"><mpath href="#cp5" /></animateMotion>
+        </circle>
+        <circle r="2" fill="var(--cb-a, #ff5a80)" opacity=".8">
+            <animateMotion dur="28s" repeatCount="indefinite" begin="-22s" rotate="0"><mpath href="#cp6" /></animateMotion>
+        </circle>
+    </g>
+</svg>

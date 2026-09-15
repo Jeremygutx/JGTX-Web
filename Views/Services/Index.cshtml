@@ -1,0 +1,458 @@
+@{
+    ViewData["Title"] = "Servicios";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/services.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/circuit.css" asp-append-version="true" />
+}
+
+<section class="services-page" id="servicesPage">
+    <div class="circuit-page-bg">
+        @await Html.PartialAsync("Components/_CircuitBackground")
+    </div>
+    <div class="circuit-page-content">
+    <div class="services-bg-grid" aria-hidden="true"></div>
+    <div class="services-orb services-orb-one" aria-hidden="true"></div>
+    <div class="services-orb services-orb-two" aria-hidden="true"></div>
+
+    <header class="services-hero">
+        <div class="services-hero-meta">
+            <span class="services-kicker">JGTX TECH / SERVICIOS</span>
+            <span class="services-status"><i></i> DISPONIBLE PARA PROYECTOS</span>
+        </div>
+
+        <div class="services-hero-content">
+            <h1>Servicios</h1>
+        </div>
+
+        <div class="services-hero-index" aria-hidden="true">
+            <span>01</span><span>06</span>
+            <div></div>
+        </div>
+    </header>
+
+    <section class="services-stats" aria-label="JGTX en cifras">
+        <div class="services-stat"><b>+1</b><span>PROYECTO A LA VEZ</span></div>
+        <div class="services-stat"><b>100%</b><span>ENFOQUE DIGITAL</span></div>
+        <div class="services-stat"><b>24/7</b><span>DISPONIBILIDAD</span></div>
+        <div class="services-stat"><b>&lt;24h</b><span>RESPUESTA</span></div>
+    </section>
+
+    <section class="services-list" id="service-list">
+        <div class="services-carousel">
+            <button type="button" class="svc-nav svc-nav-prev" aria-label="Ver servicio anterior"><i class="fa-solid fa-arrow-left"></i></button>
+            <div class="services-scroll" role="group" aria-label="Lista de servicios">
+                <div class="services-grid" tabindex="0">
+                <button type="button" class="service-card" data-service-card data-target="svc-01" aria-expanded="true">
+                    <span class="service-card-top"><span class="service-card-num">01</span><span class="service-card-icon fa-solid fa-code" aria-hidden="true"></span></span>
+                    <span class="service-card-label">SOFTWARE</span>
+                    <strong class="service-card-name">Desarrollo Web</strong>
+                    <span class="service-card-tags">Webs corporativas · Landing · E-commerce · Sistemas web</span>
+                    <span class="service-card-arrow" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+                </button>
+
+                <button type="button" class="service-card" data-service-card data-target="svc-02" aria-expanded="false">
+                    <span class="service-card-top"><span class="service-card-num">02</span><span class="service-card-icon fa-solid fa-mobile-screen-button" aria-hidden="true"></span></span>
+                    <span class="service-card-label">PRODUCTO DIGITAL</span>
+                    <strong class="service-card-name">Aplicaciones</strong>
+                    <span class="service-card-tags">Apps empresariales · Plataformas · Paneles · Integraciones</span>
+                    <span class="service-card-arrow" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+                </button>
+
+                <button type="button" class="service-card" data-service-card data-target="svc-03" aria-expanded="false">
+                    <span class="service-card-top"><span class="service-card-num">03</span><span class="service-card-icon fa-solid fa-brain" aria-hidden="true"></span></span>
+                    <span class="service-card-label">INTELIGENCIA ARTIFICIAL</span>
+                    <strong class="service-card-name">IA aplicada</strong>
+                    <span class="service-card-tags">Integración de IA · Asistentes · Procesamiento · A medida</span>
+                    <span class="service-card-arrow" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+                </button>
+
+                <button type="button" class="service-card" data-service-card data-target="svc-04" aria-expanded="false">
+                    <span class="service-card-top"><span class="service-card-num">04</span><span class="service-card-icon fa-solid fa-gears" aria-hidden="true"></span></span>
+                    <span class="service-card-label">OPTIMIZACIÓN</span>
+                    <strong class="service-card-name">Automatización</strong>
+                    <span class="service-card-tags">Procesos · Integraciones · Flujos · Optimización</span>
+                    <span class="service-card-arrow" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+                </button>
+
+                <button type="button" class="service-card" data-service-card data-target="svc-05" aria-expanded="false">
+                    <span class="service-card-top"><span class="service-card-num">05</span><span class="service-card-icon fa-solid fa-magnifying-glass-chart" aria-hidden="true"></span></span>
+                    <span class="service-card-label">ANÁLISIS DIGITAL</span>
+                    <strong class="service-card-name">Forense Digital</strong>
+                    <span class="service-card-tags">Evidencia · Investigación · Preservación · Informes</span>
+                    <span class="service-card-arrow" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+                </button>
+
+                <button type="button" class="service-card" data-service-card data-target="svc-06" aria-expanded="false">
+                    <span class="service-card-top"><span class="service-card-num">06</span><span class="service-card-icon fa-solid fa-network-wired" aria-hidden="true"></span></span>
+                    <span class="service-card-label">ESTRATEGIA</span>
+                    <strong class="service-card-name">Transformación Digital</strong>
+                    <span class="service-card-tags">Digitalización · Arquitectura · Integración · Estrategia</span>
+                    <span class="service-card-arrow" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+                </button>
+            </div>
+            </div>
+            <button type="button" class="svc-nav svc-nav-next" aria-label="Ver siguiente servicio"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <div class="service-showcase" role="region" aria-live="polite">
+
+            <div class="service-show-panel" data-show-panel="svc-01">
+                <div class="service-show-top">
+                    <div class="service-panel-copy">
+                        <span class="service-card-label">SOFTWARE / 01</span>
+                        <h3 class="service-show-title">Desarrollo Web</h3>
+                        <p class="service-panel-desc">Creamos sitios y tiendas en línea con estrategia, velocidad y diseño, pensados para convertir visitas en clientes y sostener el crecimiento de tu marca.</p>
+                    </div>
+                    <div class="service-panel-media">
+                        <img src="~/img/services/desarrolloweb1.jpg" alt="Desarrollo Web" loading="lazy" />
+                        <img src="~/img/services/desarrolloweb2.jpg" alt="Desarrollo Web — detalle" loading="lazy" />
+                    </div>
+                </div>
+                <div class="service-show-body">
+                    <div class="service-show-block">
+                        <h4 class="service-show-h4">QUÉ INCLUYE</h4>
+                        <ul class="service-show-list">
+                            <li>Web corporativa, landing, e-commerce o sistema web a medida</li>
+                            <li>Rendimiento optimizado y carga rápida en móvil</li>
+                            <li>SEO técnico y Google Analytics desde el día uno</li>
+                            <li>Panel para gestionar contenido sin depender de técnicos</li>
+                        </ul>
+                    </div>
+                    <div class="service-show-block">
+                        <h4 class="service-show-h4">CÓMO TRABAJAMOS</h4>
+                        <ul class="service-show-list">
+                            <li>Definimos estructura, audiencia y objetivos</li>
+                            <li>Diseñamos y desarrollamos en etapas visibles</li>
+                            <li>Publicamos, medimos y acompañamos el lanzamiento</li>
+                        </ul>
+                    </div>
+                    <div class="service-show-block">
+                        <h4 class="service-show-h4">RESULTADOS</h4>
+                        <ul class="service-show-list">
+                            <li>Una web rápida, segura y con imagen profesional</li>
+                            <li>Más consultas, tráfico y conversiones</li>
+                            <li>Una base que crece junto a tu negocio</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-panel-actions">
+                    <a asp-controller="Home" asp-action="Contact" asp-route-subject="Quiero cotizar Desarrollo Web" class="services-primary-btn">HABLEMOS <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://wa.me/51999999999?text=Hola%2C%20quiero%20cotizar%20Desarrollo%20Web." target="_blank" rel="noopener noreferrer" class="services-wa-btn"><i class="fa-brands fa-whatsapp"></i> WHATSAPP</a>
+                </div>
+            </div>
+
+            <div class="service-show-panel" data-show-panel="svc-02">
+                <div class="service-show-top">
+                    <div class="service-panel-copy">
+                        <span class="service-card-label">PRODUCTO DIGITAL / 02</span>
+                        <h3 class="service-show-title">Aplicaciones</h3>
+                        <p class="service-panel-desc">Desarrollamos apps y plataformas empresariales de extremo a extremo: desde la idea hasta la puesta en producción, con foco en tu operación.</p>
+                    </div>
+                    <div class="service-panel-media">
+                        <img src="~/img/services/aplicaciones1.jpg" alt="Aplicaciones" loading="lazy" />
+                        <img src="~/img/services/aplicaciones2.jpg" alt="Aplicaciones — detalle" loading="lazy" />
+                    </div>
+                </div>
+                <div class="service-show-body">
+                    <div class="service-show-block">
+                        <h4 class="service-show-h4">QUÉ INCLUYE</h4>
+                        <ul class="service-show-list">
+                            <li>Apps web y móviles para Android e iOS</li>
+                            <li>Plataformas y paneles de administración</li>
+                            <li>Integraciones con tus herramientas actuales</li>
+                            <li>API, arquitectura escalable y seguridad de datos</li>
+                        </ul>
+                    </div>
+                    <div class="service-show-block">
+                        <h4 class="service-show-h4">CÓMO TRABAJAMOS</h4>
+                        <ul class="service-show-list">
+                            <li>Descubrimiento y definición de alcance</li>
+                            <li>Diseño de producto con enfoque UX/UI</li>
+                            <li>Desarrollo iterativo con entregas parciales</li>
+                            <li>Despliegue, pruebas y mantenimiento</li>
+                        </ul>
+                    </div>
+                    <div class="service-show-block">
+                        <h4 class="service-show-h4">RESULTADOS</h4>
+                        <ul class="service-show-list">
+                            <li>Operación más ágil y menos manual</li>
+                            <li>Información en tiempo real para decidir</li>
+                            <li>Una plataforma lista para crecer sin reescribir</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-panel-actions">
+                    <a asp-controller="Home" asp-action="Contact" asp-route-subject="Quiero cotizar una aplicación" class="services-primary-btn">HABLEMOS <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://wa.me/51999999999?text=Hola%2C%20quiero%20cotizar%20una%20aplicaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="services-wa-btn"><i class="fa-brands fa-whatsapp"></i> WHATSAPP</a>
+                </div>
+            </div>
+
+            <div class="service-show-panel" data-show-panel="svc-03">
+                <div class="service-show-top">
+                    <div class="service-panel-copy">
+                        <span class="service-card-label">INTELIGENCIA ARTIFICIAL / 03</span>
+                        <h3 class="service-show-title">IA aplicada</h3>
+                        <p class="service-panel-desc">Llevamos IA práctica a tu negocio: automatizamos tareas, procesamos información y asistimos a tu equipo sin fricción.</p>
+                    </div>
+                    <div class="service-panel-media">
+                        <img src="~/img/services/iaaplicada1.jpg" alt="IA aplicada" loading="lazy" />
+                        <img src="~/img/services/iaaplicada2.jpg" alt="IA aplicada — detalle" loading="lazy" />
+                    </div>
+                </div>
+                <div class="service-show-body">
+                    <div class="service-show-block">
+                        <h4 class="service-show-h4">QUÉ INCLUYE</h4>
+                        <ul class="service-show-list">
+                            <li>Asistentes conversacionales (como el chat de este sitio)</li>
+                            <li>Integración de IA en tus flujos actuales</li>
+                            <li>Procesamiento y clasificación de documentos y datos</li>
+                            <li>Chatbots entrenados con el conocimiento de tu empresa</li>
+                        </ul>
+                    </div>
+                    <div class="service-show-block">
+                        <h4 class="service-show-h4">CÓMO TRABAJAMOS</h4>
+                        <ul class="service-show-list">
+                            <li>Auditamos dónde la IA aporta valor real</li>
+                            <li>Creamos un prototipo rápido con tu información</li>
+                            <li>Integramos, entrenamos y afinamos</li>
+                            <li>Medimos resultados y mejoramos continuamente</li>
+                        </ul>
+                    </div>
+                    <div class="service-show-block">
+                        <h4 class="service-show-h4">RESULTADOS</h4>
+                        <ul class="service-show-list">
+                            <li>Horas ahorradas en tareas repetitivas</li>
+                            <li>Atención disponible las 24 horas</li>
+                            <li>Decisiones más rápidas con datos procesados</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-panel-actions">
+                    <a asp-controller="Home" asp-action="Contact" asp-route-subject="Quiero integrar IA en mi negocio" class="services-primary-btn">HABLEMOS <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://wa.me/51999999999?text=Hola%2C%20quiero%20integrar%20IA%20en%20mi%20negocio." target="_blank" rel="noopener noreferrer" class="services-wa-btn"><i class="fa-brands fa-whatsapp"></i> WHATSAPP</a>
+                </div>
+            </div>
+
+            <div class="service-show-panel" data-show-panel="svc-04">
+                <div class="service-show-top">
+                    <div class="service-panel-copy">
+                        <span class="service-card-label">OPTIMIZACIÓN / 04</span>
+                        <h3 class="service-show-title">Automatización</h3>
+                        <p class="service-panel-desc">Conectamos tus herramientas y eliminamos tareas manuales con flujos automáticos que no se olvidan, no se cansan y no fallan.</p>
+                    </div>
+                    <div class="service-panel-media">
+                        <img src="~/img/services/automatizacion1.jpg" alt="Automatización" loading="lazy" />
+                        <img src="~/img/services/automatizacion2.jpg" alt="Automatización — detalle" loading="lazy" />
+                    </div>
+                </div>
+                <div class="service-show-body">
+                    <div class="service-show-block">
+                        <h4 class="service-show-h4">QUÉ INCLUYE</h4>
+                        <ul class="service-show-list">
+                            <li>Automatización de procesos internos</li>
+                            <li>Integraciones: correo, CRM, hojas de cálculo y APIs</li>
+                            <li>Flujos multi-paso con validaciones</li>
+                            <li>Alertas y reportes automáticos</li>
+                        </ul>
+                    </div>
+                    <div class="service-show-block">
+                        <h4 class="service-show-h4">CÓMO TRABAJAMOS</h4>
+                        <ul class="service-show-list">
+                            <li>Mapeamos el proceso actual a detalle</li>
+                            <li>Diseñamos el flujo ideal</li>
+                            <li>Construimos e integramos con tus sistemas</li>
+                            <li>Monitoreamos y optimizamos</li>
+                        </ul>
+                    </div>
+                    <div class="service-show-block">
+                        <h4 class="service-show-h4">RESULTADOS</h4>
+                        <ul class="service-show-list">
+                            <li>Menos errores humanos</li>
+                            <li>Tu equipo enfocado en tareas importantes</li>
+                            <li>Ahorro real de tiempo y costos</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-panel-actions">
+                    <a asp-controller="Home" asp-action="Contact" asp-route-subject="Quiero automatizar procesos" class="services-primary-btn">HABLEMOS <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://wa.me/51999999999?text=Hola%2C%20quiero%20automatizar%20procesos." target="_blank" rel="noopener noreferrer" class="services-wa-btn"><i class="fa-brands fa-whatsapp"></i> WHATSAPP</a>
+                </div>
+            </div>
+
+            <div class="service-show-panel" data-show-panel="svc-05">
+                <div class="service-show-top">
+                    <div class="service-panel-copy">
+                        <span class="service-card-label">ANÁLISIS DIGITAL / 05</span>
+                        <h3 class="service-show-title">Forense Digital</h3>
+                        <p class="service-panel-desc">Investigamos y recuperamos evidencia digital con rigor técnico y confidencialidad total, para dar certeza a decisiones legales o internas.</p>
+                    </div>
+                    <div class="service-panel-media">
+                        <img src="~/img/services/forensedigital1.jpg" alt="Forense Digital" loading="lazy" />
+                        <img src="~/img/services/forensedigital2.jpg" alt="Forense Digital — detalle" loading="lazy" />
+                    </div>
+                </div>
+                <div class="service-show-body">
+                    <div class="service-show-block">
+                        <h4 class="service-show-h4">QUÉ INCLUYE</h4>
+                        <ul class="service-show-list">
+                            <li>Análisis de dispositivos, cuentas y sistemas</li>
+                            <li>Recuperación de información borrada</li>
+                            <li>Cadena de custodia formal</li>
+                            <li>Informes técnicos claros y presentables</li>
+                        </ul>
+                    </div>
+                    <div class="service-show-block">
+                        <h4 class="service-show-h4">CÓMO TRABAJAMOS</h4>
+                        <ul class="service-show-list">
+                            <li>Recepción y resguardo de la evidencia</li>
+                            <li>Análisis forense con metodología</li>
+                            <li>Informe con hallazgos y conclusiones</li>
+                            <li>Acompañamiento en procesos legales</li>
+                        </ul>
+                    </div>
+                    <div class="service-show-block">
+                        <h4 class="service-show-h4">RESULTADOS</h4>
+                        <ul class="service-show-list">
+                            <li>Evidencia válida y bien preservada</li>
+                            <li>Informes que cualquier persona entiende</li>
+                            <li>Confidencialidad asegurada en todo el proceso</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-panel-actions">
+                    <a asp-controller="Home" asp-action="Contact" asp-route-subject="Consultar sobre Forense Digital" class="services-primary-btn">HABLEMOS <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://wa.me/51999999999?text=Hola%2C%20quiero%20consultar%20sobre%20Forense%20Digital." target="_blank" rel="noopener noreferrer" class="services-wa-btn"><i class="fa-brands fa-whatsapp"></i> WHATSAPP</a>
+                </div>
+            </div>
+
+            <div class="service-show-panel" data-show-panel="svc-06">
+                <div class="service-show-top">
+                    <div class="service-panel-copy">
+                        <span class="service-card-label">ESTRATEGIA / 06</span>
+                        <h3 class="service-show-title">Transformación Digital</h3>
+                        <p class="service-panel-desc">Digitalizamos tu empresa por etapas, sin frenar tu operación: procesos claros, herramientas conectadas y equipo listo.</p>
+                    </div>
+                    <div class="service-panel-media">
+                        <img src="~/img/services/transformaciondigital1.jpg" alt="Transformación Digital" loading="lazy" />
+                        <img src="~/img/services/transformaciondigital2.jpg" alt="Transformación Digital — detalle" loading="lazy" />
+                    </div>
+                </div>
+                <div class="service-show-body">
+                    <div class="service-show-block">
+                        <h4 class="service-show-h4">QUÉ INCLUYE</h4>
+                        <ul class="service-show-list">
+                            <li>Diagnóstico de madurez digital</li>
+                            <li>Hoja de ruta por fases</li>
+                            <li>Digitalización de procesos clave</li>
+                            <li>Capacitación al equipo y acompañamiento</li>
+                        </ul>
+                    </div>
+                    <div class="service-show-block">
+                        <h4 class="service-show-h4">CÓMO TRABAJAMOS</h4>
+                        <ul class="service-show-list">
+                            <li>Auditamos cómo opera hoy tu empresa</li>
+                            <li>Definimos prioridades y metas</li>
+                            <li>Implementamos por etapas</li>
+                            <li>Medimos resultados y ajustamos</li>
+                        </ul>
+                    </div>
+                    <div class="service-show-block">
+                        <h4 class="service-show-h4">RESULTADOS</h4>
+                        <ul class="service-show-list">
+                            <li>Un negocio que escala sin procesos manuales</li>
+                            <li>Decisiones basadas en datos</li>
+                            <li>Un equipo preparado para la tecnología</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-panel-actions">
+                    <a asp-controller="Home" asp-action="Contact" asp-route-subject="Quiero iniciar mi transformación digital" class="services-primary-btn">HABLEMOS <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://wa.me/51999999999?text=Hola%2C%20quiero%20iniciar%20mi%20transformaci%C3%B3n%20digital." target="_blank" rel="noopener noreferrer" class="services-wa-btn"><i class="fa-brands fa-whatsapp"></i> WHATSAPP</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = [...document.querySelectorAll('[data-service-card]')];
+            const panels = [...document.querySelectorAll('[data-show-panel]')];
+
+            if (typeof IntersectionObserver === 'undefined' ||
+                window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                cards.forEach(t => t.classList.add('is-visible'));
+            } else {
+                const io = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (!entry.isIntersecting) return;
+                        entry.target.classList.add('is-visible');
+                        io.unobserve(entry.target);
+                    });
+                }, { threshold: 0.15 });
+                cards.forEach(t => io.observe(t));
+            }
+
+            function select(card) {
+                const target = card.dataset.target;
+                cards.forEach((c) => {
+                    const on = c === card;
+                    c.classList.toggle('active', on);
+                    c.setAttribute('aria-expanded', String(on));
+                });
+                panels.forEach((p) => {
+                    p.classList.toggle('active', p.dataset.showPanel === target);
+                });
+            }
+
+            cards.forEach((card) => {
+                card.addEventListener('click', () => select(card));
+            });
+
+            const scroller = document.querySelector('.services-grid');
+            const btnPrev = document.querySelector('.svc-nav-prev');
+            const btnNext = document.querySelector('.svc-nav-next');
+
+            function step() {
+                const c = scroller.querySelector('.service-card');
+                if (!c) return 0;
+                const g = parseInt(getComputedStyle(scroller).columnGap, 10) || 16;
+                return c.getBoundingClientRect().width + g;
+            }
+            btnPrev.addEventListener('click', (e) => {
+                e.preventDefault();
+                scroller.scrollBy({ left: -step(), behavior: 'smooth' });
+            });
+            btnNext.addEventListener('click', (e) => {
+                e.preventDefault();
+                scroller.scrollBy({ left: step(), behavior: 'smooth' });
+            });
+
+            select(cards[0]);
+
+            const mediaImages = [...document.querySelectorAll('.service-panel-media img')];
+            (function poll() {
+                fetch('/Services/ImagesVersion', { cache: 'no-store' })
+                    .then((r) => r.json())
+                    .then((d) => {
+                        if (typeof window.__svcV !== 'undefined' && d.v !== window.__svcV) {
+                            window.__svcV = d.v;
+                            mediaImages.forEach((img) => {
+                                const base = img.getAttribute('src').split('?')[0];
+                                img.src = base + '?v=' + d.v;
+                            });
+                        } else {
+                            window.__svcV = d.v;
+                        }
+                    })
+                    .catch(() => {})
+                    .finally(() => setTimeout(poll, 2000));
+            })();
+        });
+    </script>
+}

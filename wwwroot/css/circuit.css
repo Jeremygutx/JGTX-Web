@@ -1,0 +1,16 @@
+/* =========================================================
+   CIRCUITO NEON (fondo animado) - /About y /Contact
+   Usa variables --cb-* para ajustar el color por página.
+========================================================= */
+.circuit-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.circuit-bg .circuit-svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.circuit-bg .circuit-pulse{animation:circuitPulse 7s linear infinite}
+@keyframes circuitPulse{to{stroke-dashoffset:450}}
+.circuit-bg .circuit-node{fill:var(--cb-core,#ff174f);opacity:.4;transform-box:fill-box;transform-origin:center;animation:circuitNode 3.6s ease-in-out infinite}
+@keyframes circuitNode{0%,100%{opacity:.12;transform:scale(.55)}12%{opacity:1;transform:scale(1.6)}40%{opacity:.7;transform:scale(1.05)}}
+.about-particle{display:block}
+@media(prefers-reduced-motion:reduce){.circuit-bg .circuit-pulse,.circuit-bg .circuit-node{animation:none}.about-particle{display:none}}
+
+/* Fondo de página completa (Servicios, Proyectos, Reseñas). Requiere sección position:relative; overflow:hidden. */
+.circuit-page-bg{position:absolute;inset:0;z-index:0;opacity:.5;pointer-events:none;overflow:hidden}
+.circuit-page-content{position:relative;z-index:1}

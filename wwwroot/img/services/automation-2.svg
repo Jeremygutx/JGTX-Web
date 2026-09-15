@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#08090d"/><stop offset=".55" stop-color="#16080e"/><stop offset="1" stop-color="#020306"/></linearGradient><radialGradient id="glow"><stop stop-color="#ff274b" stop-opacity=".5"/><stop offset="1" stop-color="#ff274b" stop-opacity="0"/></radialGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#ff274b" stroke-opacity=".08"/></pattern>
+</defs>
+<rect width="800" height="540" fill="url(#bg)"/><rect width="800" height="540" fill="url(#grid)"/><circle cx="650" cy="120" r="190" fill="url(#glow)"/>
+<g fill="none" stroke="#ff274b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".92"><rect x="140" y="150" width="200" height="120" rx="14"/><rect x="460" y="150" width="200" height="120" rx="14"/><rect x="300" y="330" width="200" height="120" rx="14"/><path d="M340 210h60M420 210h20M240 210l30-90M560 210l-30-90M340 390h120"/><path d="M270 210c40-20 60 20 70 20s30-40 70-20M330 390c40-34 60 6 70 6s30-40 70-6"/></g>
+<g fill="#fff" font-family="Arial, sans-serif" letter-spacing="5"><text x="48" y="485" font-size="16">AUTOMATION</text></g>
+<rect x="48" y="500" width="120" height="2" fill="#ff274b"/>
+</svg>

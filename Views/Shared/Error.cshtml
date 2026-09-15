@@ -1,0 +1,28 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Ups, algo falló";
+}
+
+<style>
+    .error-page{position:relative;min-height:60vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:110px 22px;background:#030408;color:#fff}
+    .error-page h1{font-family:Orbitron,sans-serif;font-size:clamp(90px,20vw,200px);line-height:.9;letter-spacing:-6px;margin:0;background:linear-gradient(120deg,#ff174f,#00c8ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .error-page p{max-width:520px;margin:22px auto 0;color:#8e96a5;font:400 15px/1.8 Poppins,sans-serif}
+    .error-actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:34px}
+    .error-actions a{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;border-radius:4px;text-decoration:none;font:700 10px/1 Orbitron,sans-serif;letter-spacing:1.2px;transition:.3s}
+    .error-home{background:#ff174f;color:#fff}
+    .error-home:hover{transform:translateY(-3px);box-shadow:0 0 30px rgba(255,23,79,.4)}
+    .error-wa{border:1px solid rgba(37,211,102,.4);color:#25d366}
+    .error-wa:hover{background:rgba(37,211,102,.1);color:#fff;transform:translateY(-3px)}
+</style>
+
+<section class="error-page">
+    <h1>OPS</h1>
+    <p>
+        Algo salió mal al cargar esta página. No te preocupes:
+        puedes volver al inicio o escribirnos directamente y lo resolvemos.
+    </p>
+    <div class="error-actions">
+        <a asp-controller="Home" asp-action="Index" class="error-home">VOLVER AL INICIO <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="https://wa.me/51999999999?text=Hola%2C%20tengo%20un%20problema%20con%20la%20web." target="_blank" rel="noopener noreferrer" class="error-wa"><i class="fa-brands fa-whatsapp"></i> WHATSAPP</a>
+    </div>
+</section>

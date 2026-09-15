@@ -1,0 +1,96 @@
+<footer class="footer-jgtx footer-pro">
+    <div class="footer-noise" aria-hidden="true"></div>
+    <div class="footer-gridline" aria-hidden="true"></div>
+
+    <div class="footer-container footer-pro-container">
+        <div class="footer-brand footer-pro-brand">
+            <a asp-controller="Home" asp-action="Index" class="footer-logo" aria-label="JGTX Tech - Inicio">
+                <span>JG</span>TX <small>TECH</small>
+            </a>
+
+            <div class="footer-brand-kicker">INGENIERÍA DIGITAL + IA</div>
+
+            <p>
+                Diseñamos experiencias digitales, sistemas y soluciones tecnológicas para convertir ideas en productos reales.
+            </p>
+
+            <div class="footer-socials footer-pro-socials">
+                <a href="https://www.facebook.com/jgtx.tech" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/jgtx.tech/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@@jgtx.tech" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@@jgtx.tech" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column footer-pro-column">
+            <span class="footer-column-index">01</span>
+            <h3>Explora</h3>
+            <a asp-controller="Home" asp-action="Index">Inicio</a>
+            <a asp-controller="Services" asp-action="Index">Servicios</a>
+            <a asp-controller="Projects" asp-action="Index">Proyectos</a>
+            <a asp-controller="Home" asp-action="About">Nosotros</a>
+            <a asp-controller="Home" asp-action="Contact">Contacto</a>
+            <a asp-controller="Reviews" asp-action="Index">Reseñas</a>
+        </div>
+
+        <div class="footer-column footer-pro-column">
+            <span class="footer-column-index">02</span>
+            <h3>Soluciones</h3>
+            <a asp-controller="Services" asp-action="Index">Desarrollo Web</a>
+            <a asp-controller="Services" asp-action="Index">Aplicaciones</a>
+            <a asp-controller="Services" asp-action="Index">Inteligencia Artificial</a>
+            <a asp-controller="Services" asp-action="Index">Automatización</a>
+            <a asp-controller="Services" asp-action="Index">Transformación Digital</a>
+        </div>
+
+        <div class="footer-column footer-pro-column">
+            <span class="footer-column-index">03</span>
+            <h3>Contacto</h3>
+            <a asp-controller="Home" asp-action="Contact">Hablemos</a>
+            <a href="https://wa.me/51999999999" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+<a href="mailto:jgtx.tech@gmail.com">Correo electrónico</a>
+        <a href="mailto:jgtx.tech@gmail.com">Soporte</a>
+            <span class="footer-status"><i></i> Disponible para proyectos</span>
+        </div>
+
+        <div class="footer-newsletter footer-pro-newsletter">
+            <span class="footer-column-index">04</span>
+            <h3>Conecta con JGTX</h3>
+            <p>Recibe novedades, lanzamientos y oportunidades directamente en tu correo.</p>
+
+            <form class="newsletter-form footer-pro-form" id="newsletterForm" novalidate>
+                @Html.AntiForgeryToken()
+                <input type="email" id="newsletterEmail" name="email" placeholder="Tu correo electrónico" aria-label="Tu correo electrónico" required />
+                <button type="submit" aria-label="Suscribirse">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+
+            <div class="footer-newsletter-note">
+                <i class="fa-solid fa-shield-halved"></i>
+                Sin spam. Solo contenido útil.
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-cta-wrap">
+        <div class="footer-cta">
+            <div>
+                <span>¿TIENES UNA IDEA?</span>
+                <strong>Hagámosla realidad.</strong>
+            </div>
+            <a asp-controller="Home" asp-action="Contact" class="footer-cta-button">
+                INICIAR PROYECTO <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-bottom footer-pro-bottom">
+        <p>© @DateTime.Now.Year JGTX TECH. Todos los derechos reservados.</p>
+        <div class="footer-legal">
+            <a href="#">Privacidad</a>
+            <a href="#">Términos</a>
+            <span class="footer-location"><i class="fa-solid fa-location-dot"></i> Perú</span>
+        </div>
+    </div>
+</footer>

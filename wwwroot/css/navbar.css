@@ -1,0 +1,650 @@
+﻿/* =========================================================
+   JGTX TECH
+   NAVBAR PREMIUM
+========================================================= */
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar-jgtx {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    z-index: 1000;
+    background: rgba(4, 6, 12, 0.78);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    transition: background 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+}
+
+
+    /* =========================================================
+   NAVBAR AL HACER SCROLL
+========================================================= */
+
+    .navbar-jgtx.scrolled {
+        background: rgba(3, 5, 10, 0.94);
+        box-shadow: 0 8px 35px rgba(0, 0, 0, 0.35);
+    }
+
+
+/* =========================================================
+   CONTENEDOR
+========================================================= */
+
+.navbar-container {
+    width: min( 1280px, 92% );
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo-jgtx {
+    flex-shrink: 0;
+}
+
+
+    .logo-jgtx a {
+        display: flex;
+        align-items: flex-end;
+        gap: 8px;
+        text-decoration: none;
+        line-height: 1;
+    }
+
+
+.logo-main {
+    color: #ffffff;
+    font-family: "Orbitron", sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+
+.logo-tech {
+    margin-bottom: 2px;
+    color: #ffffff;
+    font-family: "Orbitron", sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   MENÚ
+========================================================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+    .nav-links li {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .nav-links a {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        height: 72px;
+        color: #b9bec9;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        transition: color 0.25s ease;
+    }
+
+
+        /* =========================================================
+   LÍNEA ACTIVA / HOVER
+========================================================= */
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 17px;
+            width: 0;
+            height: 2px;
+            border-radius: 10px;
+            background: linear-gradient( 90deg, #ff2147, #ff5370 );
+            transform: translateX(-50%);
+            box-shadow: 0 0 12px rgba(255, 33, 71, 0.65);
+            transition: width 0.3s ease;
+        }
+
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+
+            .nav-links a:hover::after {
+                width: 22px;
+            }
+
+
+/* =========================================================
+   ZONA DE ICONOS
+========================================================= */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   BOTONES CIRCULARES
+========================================================= */
+
+.nav-icon-btn {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 50%;
+    background: rgba(255,255,255,0.035);
+    color: #e8eaf0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+    .nav-icon-btn:hover {
+        transform: translateY(-2px);
+        color: #ffffff;
+        background: rgba(255,255,255,0.08);
+        border-color: rgba(255, 42, 72, 0.35);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+    }
+
+
+    .nav-icon-btn:active {
+        transform: scale(0.94);
+    }
+
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.nav-badge {
+    position: absolute;
+    top: -3px;
+    right: -2px;
+    min-width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    border: 2px solid #05070d;
+    border-radius: 50px;
+    background: #ff2448;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 7px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   MENÚ MÓVIL
+========================================================= */
+
+.mobile-menu-btn {
+    display: none;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 50%;
+    background: rgba(255,255,255,0.035);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.25s ease;
+}
+
+
+    .mobile-menu-btn:hover {
+        border-color: rgba(255, 40, 70, 0.4);
+        color: #ff3151;
+    }
+
+
+/* =========================================================
+   BUSCADOR
+========================================================= */
+
+.search-panel {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 18px 0;
+    background: rgba(4, 6, 12, 0.94);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+
+    .search-panel.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+
+.search-container {
+    width: min( 850px, 90% );
+    height: 52px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 17px;
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.045);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+}
+
+
+    .search-container > i {
+        color: #ff3151;
+        font-size: 15px;
+    }
+
+
+    .search-container input {
+        flex: 1;
+        min-width: 0;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-size: 13px;
+    }
+
+
+        .search-container input::placeholder {
+            color: #777e8d;
+        }
+
+
+.close-search {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    color: #aeb4c0;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+
+    .close-search:hover {
+        color: #ffffff;
+        background: rgba(255, 40, 70, 0.15);
+    }
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .navbar-container {
+        width: 94%;
+        gap: 20px;
+    }
+
+
+    .nav-links {
+        gap: 18px;
+    }
+
+
+        .nav-links a {
+            font-size: 11px;
+        }
+
+
+    .nav-actions {
+        gap: 6px;
+    }
+
+
+    .nav-icon-btn {
+        width: 37px;
+        height: 37px;
+    }
+}
+
+
+/* =========================================================
+   TABLET PEQUEÑA
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar-jgtx {
+        height: 68px;
+    }
+
+
+    .navbar-container {
+        width: 92%;
+    }
+
+
+    .nav-links {
+        position: fixed;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        height: calc( 100vh - 68px );
+        padding: 30px 25px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+        background: rgba(4,6,12,0.97);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border-top: 1px solid rgba(255,255,255,0.06);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    }
+
+
+        .nav-links.mobile-active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+
+        .nav-links li {
+            width: 100%;
+            max-width: 400px;
+        }
+
+
+        .nav-links a {
+            width: 100%;
+            height: 52px;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+
+            .nav-links a::after {
+                bottom: 5px;
+            }
+
+
+    .mobile-menu-btn {
+        display: flex;
+    }
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .navbar-jgtx {
+        height: 64px;
+    }
+
+
+    .navbar-container {
+        width: 92%;
+    }
+
+
+    .logo-main {
+        font-size: 21px;
+    }
+
+
+    .logo-tech {
+        font-size: 6px;
+        letter-spacing: 2px;
+    }
+
+
+    .nav-actions {
+        gap: 5px;
+    }
+
+
+    .nav-icon-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+
+    .nav-actions .favorites-btn {
+        display: none;
+    }
+
+
+    .nav-badge {
+        min-width: 13px;
+        height: 13px;
+        font-size: 6px;
+    }
+
+
+    .mobile-menu-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 13px;
+    }
+
+
+    .search-panel {
+        top: 64px;
+    }
+}
+
+
+/* =========================================================
+   MÓVIL MUY PEQUEÑO
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .nav-actions .search-btn {
+        display: none;
+    }
+
+
+    .logo-main {
+        font-size: 19px;
+    }
+}
+
+/* =========================================================
+   CINEMATIC NAVBAR
+========================================================= */
+.cinematic-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(to bottom, rgba(0,0,0,.68), transparent);
+    border-bottom-color: rgba(255,255,255,.04);
+}
+.cinematic-navbar .navbar-container { max-width: 1250px; }
+.cinematic-navbar .nav-links { gap: 28px; }
+.cinematic-navbar .nav-links a { font-size: 10px; letter-spacing: .4px; }
+.cinematic-nav-actions { gap: 14px; }
+.nav-talk-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 15px;
+    border: 1px solid rgba(255,39,75,.65);
+    border-radius: 5px;
+    color: #fff;
+    background: rgba(255,39,75,.05);
+    text-decoration: none;
+    font: 700 9px/1 'Poppins',sans-serif;
+    letter-spacing: 1px;
+    transition: .25s ease;
+}
+.nav-talk-button:hover { color:#fff; background:#ff274b; box-shadow:0 8px 25px rgba(255,39,75,.2); }
+@media (max-width: 900px) {
+    .cinematic-navbar .nav-links { gap: 14px; }
+    .nav-talk-button { display:none; }
+}
+
+/* =========================================================
+   NAVBAR PÍLDORA FLOTANTE
+========================================================= */
+.navbar-jgtx.navbar-pill {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 18px 22px;
+    background: transparent;
+    border-bottom: none;
+    transition: padding .35s ease;
+}
+.navbar-pill .navbar-container {
+    width: min(1210px, 96%);
+    height: 64px;
+    padding: 0 16px 0 12px;
+    gap: 28px;
+    border: 1px solid rgba(255,255,255,.09);
+    border-radius: 999px;
+    background: rgba(6,9,16,.42);
+    box-shadow: 0 12px 40px rgba(0,0,0,.28);
+    transition: height .35s ease, background .35s ease, box-shadow .35s ease;
+}
+.navbar-pill .nav-links { gap: 26px; }
+.navbar-pill .nav-links a { height: 64px; }
+.navbar-pill.scrolled { padding: 12px 22px; }
+.navbar-pill.scrolled .navbar-container {
+    height: 56px;
+    background: rgba(5,8,14,.84);
+    box-shadow: 0 18px 50px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.05);
+}
+.navbar-pill.scrolled .nav-links a { height: 56px; }
+.navbar-pill.scrolled .logo-jgtx a { gap: 6px; }
+.navbar-pill.scrolled .nav-talk-button,
+.navbar-pill.scrolled .nav-socials a { padding-top: 0; transform: scale(.97); }
+
+/* logo: identidad original (texto, sin monograma) */
+.logo-jgtx a { align-items: flex-end; gap: 8px; }
+.logo-tech { margin-bottom: 2px; transition: font-size .35s ease, letter-spacing .35s ease; }
+
+/* redes sociales */
+.nav-socials { display: flex; align-items: center; gap: 7px; }
+.nav-socials a {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 50%;
+    background: rgba(255,255,255,.03);
+    color: #d7dbe4;
+    font-size: 13px;
+    text-decoration: none;
+    transition: .25s ease;
+}
+.nav-socials a:hover {
+    color: #fff;
+    background: rgba(255,46,99,.14);
+    border-color: rgba(255,46,99,.45);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(0,0,0,.25);
+}
+
+/* móvil: píldora compacta y panel desplazado */
+@media (max-width: 1100px) {
+    .navbar-pill .navbar-container { gap: 18px; }
+    .navbar-pill .nav-links { gap: 16px; }
+    .navbar-pill .nav-links a { font-size: 10px; }
+    .navbar-pill .nav-socials a { width: 31px; height: 31px; font-size: 12px; }
+}
+@media (max-width: 900px) {
+    .navbar-pill { padding: 14px 14px; }
+    .navbar-pill .navbar-container { height: 58px; border-radius: 20px; padding: 0 14px 0 10px; gap: 0; }
+    .navbar-pill .nav-links { top: 86px; height: calc(100vh - 86px); }
+    .navbar-pill .nav-links a { height: 52px; }
+    .navbar-pill.scrolled { padding: 10px 14px; }
+    .navbar-pill.scrolled .navbar-container { height: 54px; }
+    .navbar-pill.scrolled .nav-links a { height: 52px; }
+    .navbar-pill.scrolled .logo-jgtx a { gap: 6px; }
+    .nav-socials { display: none; }
+}
+@media (max-width: 600px) {
+    .navbar-pill { padding: 12px 12px; }
+    .navbar-pill .navbar-container { height: 54px; border-radius: 16px; }
+    .navbar-pill .nav-links { top: 78px; height: calc(100vh - 78px); }
+    .navbar-pill.scrolled .navbar-container { height: 50px; }
+    .navbar-pill.scrolled .logo-jgtx a { gap: 6px; }
+    .navbar-pill.scrolled .logo-tech { font-size: 6px; }
+}

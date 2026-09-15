@@ -1,0 +1,274 @@
+@{
+    ViewData["Title"] = "Nosotros";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/about.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/circuit.css" asp-append-version="true" />
+}
+
+<section class="about-pro-page">
+    <div class="about-pro-noise"></div>
+    <div class="about-pro-grid"></div>
+
+    <div class="about-pro-hero">
+        <div class="about-pro-hero-bg"><div class="circuit-bg">@await Html.PartialAsync("Components/_CircuitBackground")</div></div>
+        <div class="about-pro-hero-overlay"></div>
+
+        <div class="about-pro-hero-meta">
+            <span>JGTX TECH</span>
+            <span><i></i> INGENIERÍA DIGITAL + IA</span>
+        </div>
+
+        <div class="about-pro-hero-content">
+            <span class="about-pro-kicker">01 / NOSOTROS</span>
+            <h1>Construimos<br /><span>lo que sigue.</span></h1>
+            <p>
+                JGTX es una marca de ingeniería digital enfocada en crear experiencias,
+                aplicaciones y soluciones tecnológicas que convierten ideas en productos reales.
+            </p>
+            <a asp-controller="Home" asp-action="Contact" class="about-pro-btn">
+                HABLEMOS <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="about-pro-scroll">
+            <span>SCROLL PARA CONOCERNOS</span>
+            <i class="fa-solid fa-arrow-down"></i>
+        </div>
+    </div>
+
+    <div class="about-pro-intro">
+        <div class="about-pro-intro-label">02 / NUESTRA ESENCIA</div>
+        <div class="about-pro-intro-copy">
+            <h2>La tecnología no es solo una herramienta.<br /><span>Es la forma de avanzar.</span></h2>
+            <p>
+                Diseñamos soluciones digitales con una mezcla de estrategia, desarrollo,
+                inteligencia artificial y creatividad. Nuestro objetivo es crear tecnología
+                útil, moderna y preparada para crecer junto a cada proyecto.
+            </p>
+        </div>
+    </div>
+
+    <div class="about-pro-pillar-carousel">
+        <div class="about-pro-pillars" id="aboutPillars" aria-roledescription="carrusel" aria-label="Pilares de JGTX">
+
+        <article class="about-pro-pillar is-active">
+            <div class="about-pro-pillar-number">01</div>
+            <div class="about-pro-pillar-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3>Innovación</h3>
+            <p>Exploramos nuevas ideas, tecnologías y formas de resolver problemas digitales.</p>
+        </article>
+        <article class="about-pro-pillar">
+            <div class="about-pro-pillar-number">02</div>
+            <div class="about-pro-pillar-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Ingeniería</h3>
+            <p>Convertimos conceptos en productos digitales sólidos, escalables y funcionales.</p>
+        </article>
+        <article class="about-pro-pillar">
+            <div class="about-pro-pillar-number">03</div>
+            <div class="about-pro-pillar-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Inteligencia</h3>
+            <p>Integramos IA y automatización para crear procesos más rápidos y eficientes.</p>
+        </article>
+        <article class="about-pro-pillar">
+            <div class="about-pro-pillar-number">04</div>
+            <div class="about-pro-pillar-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>Experiencia</h3>
+            <p>Construimos interfaces y experiencias digitales pensadas para personas reales.</p>
+        </article>
+
+        </div>
+
+        <div class="about-pro-pillars-controls">
+            <button type="button" class="pillars-nav pillars-prev" aria-label="Pilar anterior"><i class="fa-solid fa-arrow-left"></i></button>
+            <div class="pillars-dots" role="group" aria-label="Seleccionar pilar"></div>
+            <button type="button" class="pillars-nav pillars-next" aria-label="Pilar siguiente"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <div class="about-pro-stats">
+        <div><b>+1</b><span>PROYECTO A LA VEZ</span></div>
+        <div><b>100%</b><span>ENFOQUE DIGITAL</span></div>
+        <div><b>24/7</b><span>DISPONIBILIDAD</span></div>
+        <div><b>&lt;24h</b><span>TIEMPO DE RESPUESTA</span></div>
+    </div>
+
+    <div class="about-pro-mission">
+        <div class="about-pro-mission-visual">
+            <div class="about-pro-orbit orbit-one"></div>
+            <div class="about-pro-orbit orbit-two"></div>
+            <div class="about-pro-orbit-core">JGTX<br /><small>TECH</small></div>
+        </div>
+        <div class="about-pro-mission-copy">
+            <span class="about-pro-kicker">03 / PROPÓSITO</span>
+            <h2>De una idea<br /><span>a algo real.</span></h2>
+            <p>
+                Creemos que una buena solución digital debe sentirse simple para quien la utiliza,
+                aunque detrás exista una ingeniería compleja. Por eso trabajamos desde la idea y el
+                diseño hasta el desarrollo, la automatización y la evolución del producto.
+            </p>
+            <div class="about-pro-mission-points">
+                <div><strong>01</strong><span>Entender el problema</span></div>
+                <div><strong>02</strong><span>Diseñar la solución</span></div>
+                <div><strong>03</strong><span>Construir y mejorar</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-pro-values">
+        <div class="about-pro-section-head">
+            <div>
+                <span class="about-pro-kicker">04 / LO QUE NOS DEFINE</span>
+                <h2>Una visión digital<br /><span>sin límites.</span></h2>
+            </div>
+            <p>Profesionalismo, creatividad y tecnología trabajando en una misma dirección.</p>
+        </div>
+
+        <div class="about-pro-values-list">
+            <div class="about-pro-value-row"><span>01</span><strong>Creatividad</strong><em>Ideas que se convierten en experiencias.</em><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            <div class="about-pro-value-row"><span>02</span><strong>Precisión</strong><em>Desarrollo pensado para funcionar y escalar.</em><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            <div class="about-pro-value-row"><span>03</span><strong>Adaptación</strong><em>Tecnología preparada para nuevos desafíos.</em><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            <div class="about-pro-value-row"><span>04</span><strong>Impacto</strong><em>Soluciones que buscan resultados reales.</em><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+        </div>
+    </div>
+
+    <div class="about-pro-cta">
+        <span class="about-pro-kicker">05 / SIGAMOS</span>
+        <h2>¿Tienes una idea<br /><span>que quieres convertir en realidad?</span></h2>
+        <div class="about-pro-cta-actions">
+            <a asp-controller="Home" asp-action="Contact" class="about-pro-btn about-pro-btn-large">
+                INICIAR PROYECTO <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="https://wa.me/51999999999?text=Hola%2C%20quiero%20hablar%20de%20un%20proyecto." target="_blank" rel="noopener noreferrer" class="about-pro-wa-btn"><i class="fa-brands fa-whatsapp"></i> WHATSAPP</a>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.from('.about-pro-hero-content > *', {
+                y: 45,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.12,
+                ease: 'power3.out'
+            });
+
+            gsap.to('.about-pro-hero-bg', {
+                yPercent: 12,
+                scale: 1.08,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.about-pro-hero',
+                    start: 'top top',
+                    end: 'bottom top',
+                    scrub: true
+                }
+            });
+
+            gsap.from('.about-pro-pillar-carousel', {
+                y: 50,
+                opacity: 0,
+                duration: .8,
+                ease: 'power3.out',
+                scrollTrigger: { trigger: '.about-pro-pillar-carousel', start: 'top 88%', once: true }
+            });
+
+            gsap.from('.about-pro-mission-visual', {
+                x: -70,
+                opacity: 0,
+                duration: 1,
+                ease: 'power3.out',
+                scrollTrigger: { trigger: '.about-pro-mission', start: 'top 80%', once: true }
+            });
+
+            gsap.from('.about-pro-mission-copy > *', {
+                x: 50,
+                opacity: 0,
+                duration: .8,
+                stagger: .1,
+                ease: 'power3.out',
+                scrollTrigger: { trigger: '.about-pro-mission', start: 'top 80%', once: true }
+            });
+
+            gsap.utils.toArray('.about-pro-value-row').forEach((row) => {
+                gsap.from(row, {
+                    y: 35,
+                    opacity: 0,
+                    duration: .7,
+                    ease: 'power3.out',
+                    scrollTrigger: { trigger: row, start: 'top 90%', once: true }
+                });
+            });
+
+            gsap.from('.about-pro-cta > *', {
+                y: 35,
+                opacity: 0,
+                duration: .8,
+                stagger: .1,
+                ease: 'power3.out',
+                scrollTrigger: { trigger: '.about-pro-cta', start: 'top 82%', once: true }
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousel = document.getElementById('aboutPillars');
+            if (!carousel) return;
+            const slides = [...carousel.querySelectorAll('.about-pro-pillar')];
+            if (slides.length < 2) return;
+            const controls = carousel.nextElementSibling;
+            const dotsBox = controls.querySelector('.pillars-dots');
+            const prevBtn = controls.querySelector('.pillars-prev');
+            const nextBtn = controls.querySelector('.pillars-next');
+            const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            let index = slides.findIndex((s) => s.classList.contains('is-active'));
+            if (index < 0) index = 0;
+            let timer = null;
+
+            const dots = slides.map((_, k) => {
+                const d = document.createElement('button');
+                d.type = 'button';
+                d.className = 'pillars-dot' + (k === index ? ' is-active' : '');
+                d.setAttribute('aria-label', 'Pilar ' + (k + 1));
+                d.addEventListener('click', () => { activate(k); restart(); });
+                dotsBox.appendChild(d);
+                return d;
+            });
+
+            function activate(n) {
+                index = (n + slides.length) % slides.length;
+                slides.forEach((s, k) => {
+                    s.classList.toggle('is-active', k === index);
+                    dots[k].classList.toggle('is-active', k === index);
+                });
+            }
+
+            function stop() {
+                if (timer) { clearInterval(timer); timer = null; }
+            }
+
+            function restart() {
+                if (reduced) return;
+                stop();
+                timer = setInterval(() => activate(index + 1), 4200);
+            }
+
+            prevBtn.addEventListener('click', () => { activate(index - 1); restart(); });
+            nextBtn.addEventListener('click', () => { activate(index + 1); restart(); });
+
+            if (!reduced) {
+                carousel.addEventListener('mouseenter', stop);
+                carousel.addEventListener('mouseleave', restart);
+                document.addEventListener('visibilitychange', () => document.hidden ? stop() : restart());
+                restart();
+            }
+        });
+    </script>
+}

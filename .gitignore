@@ -1,0 +1,22 @@
+### Build artifacts
+**/bin/
+**/obj/
+**/publish/
+
+### IDE / local
+.vs/
+.vscode/
+*.suo
+*.user
+*.userjs
+
+### OS
+Thumbs.db
+.DS_Store
+
+### Local dev config (no secrets)
+**/appsettings.Development.json
+
+### Restos del scaffolding de imágenes
+*.FullName
+0

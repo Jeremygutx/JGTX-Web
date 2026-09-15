@@ -1,0 +1,26 @@
+@model JGTX.Web.ViewModels.HomeViewModel
+
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/cinematic-scroll-film.css" asp-append-version="true" />
+}
+
+@await Html.PartialAsync("Components/_CinematicHome", Model)
+
+
+<noscript>
+    <style>
+        .jgtx-scroll-film { height: auto !important; min-height: 0 !important; }
+        .jgtx-film-stage { position: relative !important; height: auto !important; min-height: 0 !important; }
+        .film-scene { position: relative !important; opacity: 1 !important; visibility: visible !important; transform: none !important; filter: none !important; pointer-events: auto !important; min-height: auto !important; }
+    </style>
+</noscript>
+
+
+@section Scripts {
+    <script src="~/js/jgtx-scroll-film-final.js" asp-append-version="true"></script>
+    <script src="~/js/contact.js" asp-append-version="true"></script>
+}

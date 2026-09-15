@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#08090d"/><stop offset=".55" stop-color="#16080e"/><stop offset="1" stop-color="#020306"/></linearGradient><radialGradient id="glow"><stop stop-color="#ff274b" stop-opacity=".5"/><stop offset="1" stop-color="#ff274b" stop-opacity="0"/></radialGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#ff274b" stroke-opacity=".08"/></pattern>
+</defs>
+<rect width="800" height="540" fill="url(#bg)"/><rect width="800" height="540" fill="url(#grid)"/><circle cx="650" cy="120" r="190" fill="url(#glow)"/>
+<g fill="none" stroke="#ff274b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".92"><circle cx="400" cy="240" r="95"/><path d="M470 306l70 84"/><path d="M345 195c-6 40 6 84 34 118M400 170c-8 52 4 110 40 152M455 205c6 46-8 100-46 138"/><circle cx="400" cy="240" r="150" stroke-opacity=".3"/></g>
+<g fill="#fff" font-family="Arial, sans-serif" letter-spacing="5"><text x="48" y="485" font-size="16">FORENSICS</text></g>
+<rect x="48" y="500" width="120" height="2" fill="#ff274b"/>
+</svg>

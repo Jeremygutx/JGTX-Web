@@ -1,0 +1,24 @@
+﻿:root {
+    /* Fondo */
+    --background: #05070D;
+    --surface: #0D1320;
+    --surface2: #131C2E;
+
+    /* Marca */
+    --primary: #00C8FF;     /* cian: acento principal */
+    --secondary: #FF2E63;   /* rojo: acento secundario */
+    --accent: #FF2E63;      /* alias coherente para el acento rojo */
+
+    /* Texto */
+    --white: #FFFFFF;
+    --gray: #B9C1D0;
+
+    /* Extras */
+    --border: #1C263B;
+    --transition: .35s ease;
+    --radius: 14px;
+
+    /* Tipografía de marca */
+    --font-display: 'Orbitron', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+}

@@ -1,0 +1,169 @@
+@{
+    ViewData["Title"] = "Proyectos";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/projects.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/circuit.css" asp-append-version="true" />
+}
+
+<section class="projects-page" id="projectsPage">
+    <div class="circuit-page-bg">
+        @await Html.PartialAsync("Components/_CircuitBackground")
+    </div>
+    <div class="circuit-page-content">
+    <div class="projects-page-grid" aria-hidden="true"></div>
+    <div class="projects-page-glow projects-page-glow-one" aria-hidden="true"></div>
+    <div class="projects-page-glow projects-page-glow-two" aria-hidden="true"></div>
+
+    <header class="projects-page-hero">
+        <div class="projects-page-meta">
+            <span>JGTX TECH / PROYECTOS</span>
+            <span><i></i> PORTAFOLIO</span>
+        </div>
+
+        <div class="projects-page-heading">
+            <span class="projects-page-kicker">CASOS Y EXPERIENCIAS</span>
+            <h1>Proyectos</h1>
+        </div>
+
+        <div class="projects-page-scroll" aria-hidden="true">
+            <span>SCROLL PARA EXPLORAR</span>
+            <i class="fa-solid fa-arrow-down"></i>
+        </div>
+    </header>
+
+    <section class="projects-areas" id="projects-areas">
+        <div class="projects-areas-head">
+            <div>
+                <span class="projects-page-kicker">CASOS</span>
+                <h2>Proyectos <span>creados</span> por mí.</h2>
+            </div>
+            <p>
+                Cada caso describe un problema real, lo que se construyó y el resultado obtenido.
+                Sin humo: proyectos terminados y en funcionamiento.
+            </p>
+        </div>
+
+        <div class="projects-areas-grid">
+            <article class="project-area-card" data-project-card>
+                <div class="project-area-top"><span>01</span><i class="fa-solid fa-code"></i></div>
+                <div class="project-area-body">
+                    <span class="project-area-tag">WEB · 2025</span>
+                    <h3>ScrollFilm</h3>
+                    <p>Plataforma web para gestionar catálogos y pedidos de productos con panel administrativo.</p>
+                    <ul class="project-area-tags">
+                        <li>ASP.NET Core</li><li>MVC</li><li>Razor</li><li>SQL</li>
+                    </ul>
+                </div>
+                <a asp-controller="Home" asp-action="Contact" class="project-area-link">VER CASO <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+
+            <article class="project-area-card" data-project-card>
+                <div class="project-area-top"><span>02</span><i class="fa-solid fa-mobile-screen-button"></i></div>
+                <div class="project-area-body">
+                    <span class="project-area-tag">APLICACIÓN · 2025</span>
+                    <h3>Proyecto Integrador</h3>
+                    <p>Aplicación desarrollada como proyecto integrador: módulos, datos y flujo completo de uso.</p>
+                    <ul class="project-area-tags">
+                        <li>Sistemas</li><li>Panel</li><li>CRUD</li><li>Base de datos</li>
+                    </ul>
+                </div>
+                <a asp-controller="Home" asp-action="Contact" class="project-area-link">VER CASO <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+
+            <article class="project-area-card" data-project-card>
+                <div class="project-area-top"><span>03</span><i class="fa-solid fa-brain"></i></div>
+                <div class="project-area-body">
+                    <span class="project-area-tag">IA · 2026</span>
+                    <h3>Agente de atención</h3>
+                    <p>Chatbot de IA integrado a una web que responde consultas, guía al usuario y deriva pedidos.</p>
+                    <ul class="project-area-tags">
+                        <li>LLMs</li><li>Agentes</li><li>Integración</li><li>API</li>
+                    </ul>
+                </div>
+                <a asp-controller="Home" asp-action="Contact" class="project-area-link">VER CASO <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+
+            <article class="project-area-card" data-project-card>
+                <div class="project-area-top"><span>04</span><i class="fa-solid fa-gears"></i></div>
+                <div class="project-area-body">
+                    <span class="project-area-tag">AUTOMATIZACIÓN · 2026</span>
+                    <h3>Flujo de procesos</h3>
+                    <p>Automatización de tareas repetitivas con flujos validados y reportes automáticos.</p>
+                    <ul class="project-area-tags">
+                        <li>Workflows</li><li>Integraciones</li><li>Optimización</li>
+                    </ul>
+                </div>
+                <a asp-controller="Home" asp-action="Contact" class="project-area-link">VER CASO <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+
+            <article class="project-area-card" data-project-card>
+                <div class="project-area-top"><span>05</span><i class="fa-solid fa-layer-group"></i></div>
+                <div class="project-area-body">
+                    <span class="project-area-tag">WEB · 2026</span>
+                    <h3>Landing + portafolio</h3>
+                    <p>Sitio comercial con diseño editorial, secciones de servicios y contacto directo por WhatsApp.</p>
+                    <ul class="project-area-tags">
+                        <li>Diseño</li><li>HTML/CSS</li><li>UX</li><li>SEO</li>
+                    </ul>
+                </div>
+                <a asp-controller="Home" asp-action="Contact" class="project-area-link">VER CASO <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+
+            <article class="project-area-card" data-project-card>
+                <div class="project-area-top"><span>06</span><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="project-area-body">
+                    <span class="project-area-tag">SEGURIDAD · 2026</span>
+                    <h3>Análisis forense</h3>
+                    <p>Investigación de evidencia digital y documentación técnica para procesos internos.</p>
+                    <ul class="project-area-tags">
+                        <li>Evidencia</li><li>Informes</li><li>Preservación</li>
+                    </ul>
+                </div>
+                <a asp-controller="Home" asp-action="Contact" class="project-area-link">VER CASO <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+        </div>
+    </section>
+
+    <section class="projects-stats">
+        <div class="projects-stat"><b>100%</b><span>ENFOQUE DIGITAL</span></div>
+        <div class="projects-stat"><b>+1</b><span>PROYECTO A LA VEZ</span></div>
+        <div class="projects-stat"><b>24/7</b><span>DISPONIBILIDAD</span></div>
+        <div class="projects-stat"><b>01</b><span>VISIÓN: TECNOLOGÍA + IA</span></div>
+    </section>
+
+    <section class="projects-cta">
+        <div>
+            <span class="projects-page-kicker">JGTX TECH</span>
+            <h2>¿Tu proyecto puede<br /><span>encajar aquí?</span></h2>
+        </div>
+        <div class="projects-cta-actions">
+            <a asp-controller="Home" asp-action="Contact" class="projects-primary-btn">INICIAR PROYECTO <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="https://wa.me/51999999999?text=Hola%2C%20quiero%20hablar%20de%20un%20proyecto%20JGTX." target="_blank" rel="noopener noreferrer" class="projects-wa-btn"><i class="fa-brands fa-whatsapp"></i> WHATSAPP</a>
+        </div>
+    </section>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('[data-project-card]');
+            if (cards.length && 'IntersectionObserver' in window &&
+                !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                const io = new IntersectionObserver((entries) => {
+                    entries.forEach((entry, idx) => {
+                        if (!entry.isIntersecting) return;
+                        const el = entry.target;
+                        setTimeout(() => { el.classList.add('is-visible'); }, idx * 90);
+                        io.unobserve(el);
+                    });
+                }, { threshold: 0.15 });
+                cards.forEach(c => io.observe(c));
+            } else {
+                cards.forEach(c => c.classList.add('is-visible'));
+            }
+        });
+    </script>
+}

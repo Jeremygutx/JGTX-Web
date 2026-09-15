@@ -1,0 +1,31 @@
+<nav class="navbar-jgtx cinematic-navbar navbar-pill" id="navbar">
+    <div class="navbar-container">
+        <div class="logo-jgtx">
+            <a asp-controller="Home" asp-action="Index" aria-label="JGTX Tech">
+                <span class="logo-main">JGTX</span>
+                <span class="logo-tech">TECH</span>
+            </a>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a asp-controller="Home" asp-action="Index">Inicio</a></li>
+            <li><a asp-controller="Services" asp-action="Index">Servicios</a></li>
+            <li><a asp-controller="Projects" asp-action="Index">Proyectos</a></li>
+            <li><a asp-controller="Home" asp-action="About">Nosotros</a></li>
+            <li><a asp-controller="Home" asp-action="Contact">Contacto</a></li>
+            <li><a asp-controller="Reviews" asp-action="Index">Reseñas</a></li>
+        </ul>
+
+        <div class="nav-actions cinematic-nav-actions">
+            <div class="nav-socials">
+                <a href="https://www.instagram.com/jgtx.tech" target="_blank" rel="noopener" aria-label="Instagram de JGTX"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@@jgtx.tech" target="_blank" rel="noopener" aria-label="TikTok de JGTX"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@@jgtx.tech" target="_blank" rel="noopener" aria-label="YouTube de JGTX"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <a asp-controller="Home" asp-action="Contact" class="nav-talk-button">HABLEMOS <i class="fa-solid fa-arrow-right"></i></a>
+            <button class="mobile-menu-btn" type="button" id="mobileMenuButton" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</nav>

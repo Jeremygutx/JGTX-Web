@@ -1,0 +1,261 @@
+@model JGTX.Web.ViewModels.HomeViewModel
+
+<section class="jgtx-scroll-film" id="jgtxScrollFilm" aria-label="Experiencia JGTX">
+    <div class="jgtx-film-stage">
+        <video class="jgtx-film-video" id="jgtxFilmVideo" muted playsinline preload="auto" aria-hidden="true" tabindex="-1">
+            <source src="~/video/jgtx-hero-bg.mp4" type="video/mp4" />
+        </video>
+        <div class="jgtx-film-overlay"></div>
+        <div class="jgtx-film-grid"></div>
+        <div class="jgtx-film-noise"></div>
+        <div class="jgtx-film-redline"></div>
+
+        <!-- 01 / HERO -->
+        <div class="film-scene film-hero" data-film-scene="hero">
+            <span class="film-hero-eyebrow"><i></i> JGTX TECH · INGENIERÍA DIGITAL + IA</span>
+            <h1 class="film-hero-title">¿TIENES UNA <span>IDEA?</span><br /><strong>HAGÁMOSLO</strong> REALIDAD</h1>
+            <p class="film-hero-sub">Diseñamos, desarrollamos y automatizamos soluciones digitales para convertir tu idea en un producto real.</p>
+
+            <!-- FLUJO DE SERVICIOS -->
+            <div class="film-services-flow" aria-label="Nuestros servicios">
+                <div class="film-flow-track">
+                    <span class="film-flow-item"><i class="fa-solid fa-code"></i> DESARROLLO WEB</span>
+                    <span class="film-flow-item"><i class="fa-solid fa-mobile-screen-button"></i> APLICACIONES</span>
+                    <span class="film-flow-item"><i class="fa-solid fa-brain"></i> IA APLICADA</span>
+                    <span class="film-flow-item"><i class="fa-solid fa-gears"></i> AUTOMATIZACIÓN</span>
+                    <span class="film-flow-item"><i class="fa-solid fa-magnifying-glass-chart"></i> FORENSE DIGITAL</span>
+                    <span class="film-flow-item"><i class="fa-solid fa-network-wired"></i> TRANSFORMACIÓN DIGITAL</span>
+                    <span class="film-flow-item"><i class="fa-solid fa-code"></i> DESARROLLO WEB</span>
+                    <span class="film-flow-item"><i class="fa-solid fa-mobile-screen-button"></i> APLICACIONES</span>
+                    <span class="film-flow-item"><i class="fa-solid fa-brain"></i> IA APLICADA</span>
+                    <span class="film-flow-item"><i class="fa-solid fa-gears"></i> AUTOMATIZACIÓN</span>
+                    <span class="film-flow-item"><i class="fa-solid fa-magnifying-glass-chart"></i> FORENSE DIGITAL</span>
+                    <span class="film-flow-item"><i class="fa-solid fa-network-wired"></i> TRANSFORMACIÓN DIGITAL</span>
+                </div>
+            </div>
+
+            <p class="film-scroll-hint">SCROLL PARA EXPLORAR <i class="fa-solid fa-computer-mouse"></i></p>
+
+            <div class="film-reviews" aria-hidden="true">
+                <div class="film-review-bubble film-rb-l1" style="--fd:0s">
+                    <span class="film-review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                    <p class="film-review-text">"El mejor desarrollo web que hemos contratado."</p>
+                    <span class="film-review-user"><b class="film-review-ava">DR</b><span><b>Diego Ramírez</b><small>Empresario</small></span></span>
+                </div>
+                <div class="film-review-bubble film-rb-r1" style="--fd:-1.2s">
+                    <span class="film-review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                    <p class="film-review-text">"Mi tienda creció un 200% en 3 meses."</p>
+                    <span class="film-review-user"><b class="film-review-ava">VM</b><span><b>Valeria Mendoza</b><small>Emprendedora</small></span></span>
+                </div>
+                <div class="film-review-bubble film-rb-l2" style="--fd:-2.4s">
+                    <span class="film-review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                    <p class="film-review-text">"Atentos, rápidos y muy profesionales."</p>
+                    <span class="film-review-user"><b class="film-review-ava">CT</b><span><b>Carlos Torres</b><small>Gerente</small></span></span>
+                </div>
+                <div class="film-review-bubble film-rb-r2" style="--fd:-3.6s">
+                    <span class="film-review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                    <p class="film-review-text">"Nos automatizaron todo el proceso de ventas."</p>
+                    <span class="film-review-user"><b class="film-review-ava">AG</b><span><b>Andrea García</b><small>Operaciones</small></span></span>
+                </div>
+                <div class="film-review-bubble film-rb-l3" style="--fd:-4.8s">
+                    <span class="film-review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                    <p class="film-review-text">"La IA de atención respondió todo de inmediato."</p>
+                    <span class="film-review-user"><b class="film-review-ava">LF</b><span><b>Luis Fernández</b><small>Retail</small></span></span>
+                </div>
+                <div class="film-review-bubble film-rb-r3" style="--fd:-6s">
+                    <span class="film-review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                    <p class="film-review-text">"Soporte y calidad en cada entrega."</p>
+                    <span class="film-review-user"><b class="film-review-ava">MC</b><span><b>María del Carmen</b><small>Dueña de negocio</small></span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 02 / SERVICIOS -->
+        <div class="film-scene film-services" data-film-scene="services">
+            <div class="film-section-head">
+                <span>SOLUCIONES DIGITALES</span>
+                <h2>NUESTROS <strong>SERVICIOS</strong></h2>
+                <p>Ingeniería digital, IA y tecnología aplicada para convertir ideas en soluciones reales.</p>
+            </div>
+            <div class="film-service-grid">
+                <a asp-controller="Services" asp-action="Index" class="film-service-card">
+                    <img class="film-srv-bg" src="~/img/services/desarrolloweb1.jpg" alt="" loading="lazy" decoding="async" />
+                    <span class="film-srv-overlay" aria-hidden="true"></span>
+                    <img class="film-srv-icon" src="~/img/services/web-development.svg" alt="Desarrollo web" loading="lazy" decoding="async" />
+                    <span class="film-srv-cta" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    <div class="film-srv-body">
+                        <small>01 / SOFTWARE</small>
+                        <h3>DESARROLLO WEB</h3>
+                        <p>Sitios y plataformas web a medida, rápidas, seguras y escalables.</p>
+                    </div>
+                </a>
+                <a asp-controller="Services" asp-action="Index" class="film-service-card">
+                    <img class="film-srv-bg" src="~/img/services/aplicaciones1.jpg" alt="" loading="lazy" decoding="async" />
+                    <span class="film-srv-overlay" aria-hidden="true"></span>
+                    <img class="film-srv-icon" src="~/img/services/applications.svg" alt="Aplicaciones" loading="lazy" decoding="async" />
+                    <span class="film-srv-cta" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    <div class="film-srv-body">
+                        <small>02 / PRODUCTO DIGITAL</small>
+                        <h3>APLICACIONES</h3>
+                        <p>Apps móviles y web que conectan tu negocio con tus clientes y tu equipo.</p>
+                    </div>
+                </a>
+                <a asp-controller="Services" asp-action="Index" class="film-service-card">
+                    <img class="film-srv-bg" src="~/img/services/iaaplicada1.jpg" alt="" loading="lazy" decoding="async" />
+                    <span class="film-srv-overlay" aria-hidden="true"></span>
+                    <img class="film-srv-icon" src="~/img/services/ai.svg" alt="IA aplicada" loading="lazy" decoding="async" />
+                    <span class="film-srv-cta" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    <div class="film-srv-body">
+                        <small>03 / INTELIGENCIA</small>
+                        <h3>IA APLICADA</h3>
+                        <p>Asistentes y modelos de IA que automatizan y potencian tu operación.</p>
+                    </div>
+                </a>
+                <a asp-controller="Services" asp-action="Index" class="film-service-card">
+                    <img class="film-srv-bg" src="~/img/services/automatizacion1.jpg" alt="" loading="lazy" decoding="async" />
+                    <span class="film-srv-overlay" aria-hidden="true"></span>
+                    <img class="film-srv-icon" src="~/img/services/automation.svg" alt="Automatización" loading="lazy" decoding="async" />
+                    <span class="film-srv-cta" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    <div class="film-srv-body">
+                        <small>04 / OPTIMIZACIÓN</small>
+                        <h3>AUTOMATIZACIÓN</h3>
+                        <p>Flujos y tareas automatizadas para ahorrar tiempo y eliminar errores.</p>
+                    </div>
+                </a>
+                <a asp-controller="Services" asp-action="Index" class="film-service-card">
+                    <img class="film-srv-bg" src="~/img/services/forensedigital1.jpg" alt="" loading="lazy" decoding="async" />
+                    <span class="film-srv-overlay" aria-hidden="true"></span>
+                    <img class="film-srv-icon" src="~/img/services/forensics.svg" alt="Forense digital" loading="lazy" decoding="async" />
+                    <span class="film-srv-cta" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    <div class="film-srv-body">
+                        <small>05 / ANÁLISIS</small>
+                        <h3>FORENSE DIGITAL</h3>
+                        <p>Análisis técnico digital con evidencia confiable para tomar decisiones.</p>
+                    </div>
+                </a>
+                <a asp-controller="Services" asp-action="Index" class="film-service-card">
+                    <img class="film-srv-bg" src="~/img/services/transformaciondigital1.jpg" alt="" loading="lazy" decoding="async" />
+                    <span class="film-srv-overlay" aria-hidden="true"></span>
+                    <img class="film-srv-icon" src="~/img/services/digital-transformation.svg" alt="Transformación digital" loading="lazy" decoding="async" />
+                    <span class="film-srv-cta" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    <div class="film-srv-body">
+                        <small>06 / ESTRATEGIA</small>
+                        <h3>TRANSFORMACIÓN DIGITAL</h3>
+                        <p>Estrategia y tecnología para modernizar tu negocio de punta a punta.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 03 / PROCESO -->
+        <div class="film-scene film-process" data-film-scene="process">
+            <div class="film-section-head film-process-head">
+                <span>JGTX TECH / MÉTODO</span>
+                <h2>CÓMO <strong>TRABAJAMOS</strong></h2>
+                <p>Un proceso claro para llevar tu idea desde el primer concepto hasta una solución en producción.</p>
+            </div>
+<div class="film-process-flow">
+                <div class="film-pro-cluster" style="--nd:#26c6ff">
+                    <div class="film-pro-ring" aria-hidden="true"></div>
+                    <div class="film-pro-center">
+                        <span class="film-pro-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <small>01</small><strong>DESCUBRIMIENTO</strong>
+                    </div>
+                    <span class="film-pro-sub" style="--i:0;--N:6">Reunión inicial</span>
+                    <span class="film-pro-sub" style="--i:1;--N:6">Análisis de necesidades</span>
+                    <span class="film-pro-sub" style="--i:2;--N:6">Definición de objetivos</span>
+                    <span class="film-pro-sub" style="--i:3;--N:6">Investigación y benchmarking</span>
+                    <span class="film-pro-sub" style="--i:4;--N:6">Identificación de oportunidades</span>
+                    <span class="film-pro-sub" style="--i:5;--N:6">Alcance y requerimientos</span>
+                </div>
+                <span class="film-pro-arrow" aria-hidden="true"></span>
+                <div class="film-pro-cluster" style="--nd:#8a6cff">
+                    <div class="film-pro-ring" aria-hidden="true"></div>
+                    <div class="film-pro-center">
+                        <span class="film-pro-icon" aria-hidden="true"><i class="fa-solid fa-compass-drafting"></i></span>
+                        <small>02</small><strong>DISEÑO</strong>
+                    </div>
+                    <span class="film-pro-sub" style="--i:0;--N:6">Arquitectura de la solución</span>
+                    <span class="film-pro-sub" style="--i:1;--N:6">Diseño UX/UI</span>
+                    <span class="film-pro-sub" style="--i:2;--N:6">Prototipado</span>
+                    <span class="film-pro-sub" style="--i:3;--N:6">Definición de funcionalidades</span>
+                    <span class="film-pro-sub" style="--i:4;--N:6">Diseño visual</span>
+                    <span class="film-pro-sub" style="--i:5;--N:6">Validación de propuesta</span>
+                </div>
+                <span class="film-pro-arrow" aria-hidden="true"></span>
+                <div class="film-pro-cluster" style="--nd:#ffa24c">
+                    <div class="film-pro-ring" aria-hidden="true"></div>
+                    <div class="film-pro-center">
+                        <span class="film-pro-icon" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
+                        <small>03</small><strong>CONSTRUCCIÓN</strong>
+                    </div>
+                    <span class="film-pro-sub" style="--i:0;--N:8">Configuración del entorno</span>
+                    <span class="film-pro-sub" style="--i:1;--N:8">Desarrollo Frontend</span>
+                    <span class="film-pro-sub" style="--i:2;--N:8">Desarrollo Backend</span>
+                    <span class="film-pro-sub" style="--i:3;--N:8">Integración de APIs</span>
+                    <span class="film-pro-sub" style="--i:4;--N:8">Bases de datos</span>
+                    <span class="film-pro-sub" style="--i:5;--N:8">Inteligencia Artificial</span>
+                    <span class="film-pro-sub" style="--i:6;--N:8">Automatizaciones</span>
+                    <span class="film-pro-sub" style="--i:7;--N:8">Pruebas y optimización</span>
+                </div>
+                <span class="film-pro-arrow" aria-hidden="true"></span>
+                <div class="film-pro-cluster" style="--nd:#ff2e63">
+                    <div class="film-pro-ring" aria-hidden="true"></div>
+                    <div class="film-pro-center">
+                        <span class="film-pro-icon" aria-hidden="true"><i class="fa-solid fa-rocket"></i></span>
+                        <small>04</small><strong>LANZAMIENTO</strong>
+                    </div>
+                    <span class="film-pro-sub" style="--i:0;--N:8">Testing final</span>
+                    <span class="film-pro-sub" style="--i:1;--N:8">Corrección de errores</span>
+                    <span class="film-pro-sub" style="--i:2;--N:8">Optimización de rendimiento</span>
+                    <span class="film-pro-sub" style="--i:3;--N:8">Implementación</span>
+                    <span class="film-pro-sub" style="--i:4;--N:8">Configuración del servidor</span>
+                    <span class="film-pro-sub" style="--i:5;--N:8">Puesta en producción</span>
+                    <span class="film-pro-sub" style="--i:6;--N:8">Monitoreo</span>
+                    <span class="film-pro-sub" style="--i:7;--N:8">Soporte y evolución</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 04 / CONTACTO RÁPIDO -->
+        <div class="film-scene film-contact" data-film-scene="contact">
+            <div class="film-section-head film-contact-head">
+                <span>JGTX TECH / CONTACTO</span>
+                <h2>HABLEMOS DE TU<br /><strong>PROYECTO</strong></h2>
+                <p>Te respondemos rápido por WhatsApp, Instagram o TikTok.</p>
+            </div>
+            <div class="film-contact-panel">
+                <div class="film-contact-rail">
+                    <a class="film-contact-channel film-contact-enter" href="https://wa.me/51999999999?text=Hola%20JGTX%20Tech%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span><b>WHATSAPP</b><small>Respuesta inmediata</small></span>
+                        <em class="film-contact-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></em>
+                    </a>
+                    <a class="film-contact-channel film-contact-enter" href="https://www.instagram.com/jgtx.tech/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span><b>INSTAGRAM</b><small>@@jgtx.tech</small></span>
+                        <em class="film-contact-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></em>
+                    </a>
+                    <a class="film-contact-channel film-contact-enter" href="https://www.tiktok.com/@@jgtx.tech" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-tiktok"></i>
+                        <span><b>TIKTOK</b><small>@@jgtx.tech</small></span>
+                        <em class="film-contact-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></em>
+                    </a>
+                </div>
+                <form class="film-contact-form film-contact-enter" id="contactForm" novalidate>
+                    @Html.AntiForgeryToken()
+                    <h3>ESCRÍBENOS AHORA <i class="fa-solid fa-bolt"></i></h3>
+                    <div class="film-contact-row">
+                        <label><span>NOMBRE</span><input id="name" name="name" type="text" maxlength="80" required placeholder="Tu nombre" /></label>
+                        <label><span>APELLIDO</span><input id="lastname" name="lastname" type="text" maxlength="80" required placeholder="Tu apellido" /></label>
+                    </div>
+                    <label><span>CORREO</span><input id="email" name="email" type="email" maxlength="80" required placeholder="correo@ejemplo.com" /></label>
+                    <input type="hidden" id="subject" name="subject" value="Contacto rápido desde la web" />
+                    <label><span>MENSAJE</span><textarea id="message" name="message" rows="4" maxlength="3000" required placeholder="Cuéntanos brevemente tu proyecto..."></textarea></label>
+                    <button type="submit" class="film-contact-send"><i class="fa-solid fa-paper-plane"></i> ENVIAR MENSAJE</button>
+                    <small class="film-contact-note"><i class="fa-solid fa-shield-halved"></i> Guardamos tus datos solo para responderte.</small>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

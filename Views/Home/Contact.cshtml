@@ -1,0 +1,352 @@
+﻿@{
+    ViewData["Title"] = "Contacto";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/contact.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/circuit.css" asp-append-version="true" />
+}
+
+<section class="contact-page">
+
+    <div class="contact-circuit-bg">
+        @await Html.PartialAsync("Components/_CircuitBackground")
+    </div>
+
+    <div class="container">
+
+        <div class="contact-header">
+
+            <span>JGTX TECH / CONTACTO</span>
+
+            <h1>Hablemos de tu <em>proyecto.</em></h1>
+
+            <p>
+                ¿Tienes una consulta o necesitas información
+                sobre nuestros servicios digitales?
+                Escríbenos y te respondemos en menos de 24 horas.
+            </p>
+
+            <div class="contact-hero-actions">
+
+                <a href="https://wa.me/51999999999?text=Hola%20JGTX%20Tech%2C%20quiero%20hablar%20de%20un%20proyecto."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="contact-hero-wa">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+                    HABLAR POR WHATSAPP
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="contact-quick">
+
+            <a class="contact-quick-card"
+               href="https://www.instagram.com/jgtx.tech/"
+
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <i class="fa-brands fa-instagram"></i>
+                <span>INSTAGRAM</span>
+                <small>@@jgtx.tech</small>
+
+            </a>
+
+            <a class="contact-quick-card"
+               href="https://wa.me/51999999999?text=Hola%20JGTX%20Tech."
+
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WHATSAPP</span>
+                <small>Respuesta inmediata</small>
+
+            </a>
+
+            <a class="contact-quick-card"
+               href="https://www.tiktok.com/@@jgtx.tech"
+
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <i class="fa-brands fa-tiktok"></i>
+                <span>TIKTOK</span>
+                <small>@@jgtx.tech</small>
+            </a>
+
+            <div class="contact-quick-card">
+                <i class="fa-regular fa-clock"></i>
+                <span>HORARIO</span>
+                <small>Lun – Sáb · 9:00 – 19:00</small>
+            </div>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <!-- =========================
+                 FORMULARIO
+            ========================== -->
+
+            <div class="contact-form-card">
+
+                <h2>
+                    Envíanos un mensaje
+                </h2>
+
+                <p class="form-description">
+                    Completa tus datos y nos pondremos
+                    en contacto contigo.
+                </p>
+
+                <div class="contact-response">
+                    <i class="fa-solid fa-bolt"></i>
+                    RESPONDEMOS EN MENOS DE 24 HORAS
+                </div>
+
+
+                <form id="contactForm" novalidate>
+
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Nombre
+                            </label>
+
+                            <input type="text"
+                                   id="name"
+                                   name="name"
+                                   placeholder="Tu nombre"
+                                   required />
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="lastname">
+                                Apellido
+                            </label>
+
+                            <input type="text"
+                                   id="lastname"
+                                   name="lastname"
+                                   placeholder="Tu apellido"
+                                   required />
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Correo electrónico
+                            </label>
+
+                            <input type="email"
+                                   id="email"
+                                   name="email"
+                                   placeholder="correo@ejemplo.com"
+                                   required />
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Teléfono
+                            </label>
+
+                            <input type="tel"
+                                   id="phone"
+                                   name="phone"
+                                   placeholder="Tu número" />
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="subject">
+                            Asunto
+                        </label>
+
+                        <input type="text"
+                               id="subject"
+                               name="subject"
+                               placeholder="¿En qué podemos ayudarte?"
+                               value="@Context.Request.Query["subject"]"
+                               required />
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Mensaje
+                        </label>
+
+                        <textarea id="message"
+                                  name="message"
+                                  rows="6"
+                                  placeholder="Escribe tu mensaje..."
+                                  required></textarea>
+
+                    </div>
+
+
+                    <button type="submit"
+                            class="contact-submit">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Enviar consulta
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- =========================
+                 INFORMACIÓN
+            ========================== -->
+
+            <div class="contact-info">
+
+                <div class="contact-info-card">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <h3>
+                        Atención al cliente
+                    </h3>
+
+<p>
+                Estamos disponibles para ayudarte
+                con tus consultas sobre proyectos,
+                servicios y alianzas.
+            </p>
+
+                </div>
+
+
+                <div class="contact-info-card">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <h3>
+                        Correo
+                    </h3>
+
+                    <p>
+                        Escríbenos mediante el formulario
+                        y nos pondremos en contacto contigo.
+                    </p>
+
+                </div>
+
+
+                <!-- =========================
+                     REDES SOCIALES
+                ========================== -->
+
+                <div class="social-card">
+
+                    <h3>
+                        Síguenos
+                    </h3>
+
+                    <p>
+                        Encuentra JGTX Tech en nuestras
+                        redes sociales.
+                    </p>
+
+
+                    <div class="social-buttons">
+                        <!-- INSTAGRAM -->
+
+                        <a href="https://www.instagram.com/jgtx.tech/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="social-btn instagram">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                            <span>
+                                Instagram
+                            </span>
+
+                        </a>
+
+
+                        <!-- TIKTOK -->
+
+                        <a href="https://www.tiktok.com/@@jgtx.tech"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="social-btn tiktok">
+
+                            <i class="fa-brands fa-tiktok"></i>
+
+                            <span>
+                                TikTok
+                            </span>
+
+                        </a>
+
+
+                        <!-- WHATSAPP DIRECTO -->
+
+                        <a href="https://wa.me/51999999999?text=Hola%20JGTX%20Tech."
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="social-btn whatsapp">
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                            <span>
+                                WhatsApp directo
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+@section Scripts {
+    <script src="~/js/contact.js" asp-append-version="true"></script>
+}
