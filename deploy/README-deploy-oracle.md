@@ -88,6 +88,37 @@ docker compose logs -f caddy app
 
 ## 4. Dominio y HTTPS
 
+### 4.0 Fase de prueba sin comprar dominio (DuckDNS, gratis)
+
+Antes de pagar un dominio puedes probar con un subdominio gratis:
+
+1. Crea una cuenta en **https://www.duckdns.org** (gratis, sin tarjeta).
+2. Activa un subdominio, p. ej. **`jgtx`** → quedaría `jgtx.duckdns.org`.
+3. En DuckDNS, pon la **IP pública de tu VM** y guarda (si la VM tiene **IP
+   pública reservada**, no hará falta el cliente DDNS; es lo recomendable).
+4. En la VM edita `.env`:
+
+   ```bash
+   cd deploy && nano .env
+   # DOMAIN=jgtx.duckdns.org
+   # Site__BaseUrl=https://jgtx.duckdns.org
+   ```
+
+5. Reconstruye:
+
+   ```bash
+   docker compose up -d --build
+   ```
+
+6. La URL de prueba será **`https://jgtx.duckdns.org`** con HTTPS automático
+   (Caddy pide el certificado a Let's Encrypt).
+
+> Más adelante, al comprar `jgtx.tech`, solo cambias `DOMAIN` y `Site__BaseUrl`
+> en `.env`, apuntas el A record a la misma IP y haces `docker compose up -d`:
+> Caddy renueva el certificado solo, sin tocar nada más.
+
+### 4.1 Producción
+
 1. Cloudflare (plan **gratis**): crea una cuenta y añade tu dominio `jgtx.tech`
    (te dan 2 nameservers; cámbialos en tu registrador).
 2. **DNS → Records → Add record**: un registro **A** con `@` y otro `www`
