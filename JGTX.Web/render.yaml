@@ -1,0 +1,33 @@
+# =============================================
+# Render Blueprint — JGTX Web (.NET 10, Docker)
+# Enlaza tu GitHub y Render crea el servicio solo.
+# Plan free (sin tarjeta), HTTPS automático.
+# =============================================
+services:
+  - type: web
+    name: jgtx-web
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: Site__BaseUrl
+        value: https://jgtx-web.onrender.com
+      - key: Smtp__Host
+        value: smtp.resend.com
+      - key: Smtp__Port
+        value: "587"
+      - key: Smtp__UseSsl
+        value: "false"
+      - key: Smtp__Username
+        value: resend
+      - key: Smtp__Password
+        value: REEMPLAZA_POR_TU_KEY_DE_RESEND
+      - key: Smtp__From
+        value: jgtx.tech@gmail.com
+      - key: Smtp__FromName
+        value: JGTX Tech
+      - key: Smtp__To
+        value: jgtx.tech@gmail.com

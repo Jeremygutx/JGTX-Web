@@ -9,7 +9,8 @@ RUN dotnet publish JGTX.Web.csproj -c Release -o /app/publish -p:UseAppHost=fals
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
 WORKDIR /app
 EXPOSE 8080
-ENV ASPNETCORE_URLS=http://+:8080
 COPY --from=build /app/publish .
+COPY entrypoint.sh .
+RUN chmod +x entrypoint.sh
 USER $APP_UID
-ENTRYPOINT ["dotnet", "JGTX.Web.dll"]
+ENTRYPOINT ["/app/entrypoint.sh"]
