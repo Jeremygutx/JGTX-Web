@@ -1,0 +1,39 @@
+# ==============================================
+#  JGTX Web — despliegue en Oracle Cloud Always Free
+#  Contenedores: app (.NET 10) + Caddy (HTTPS auto)
+# ==============================================
+#
+# Uso:
+#   1) Copia .env.example a .env y rellénalo.
+#   2) docker compose up -d --build
+#   3) Mira Caddy renovará el certificado solo (Let's Encrypt).
+
+services:
+  app:
+    build:
+      context: ../JGTX.Web
+    image: jgtxweb:latest
+    restart: unless-stopped
+    env_file: .env
+    expose:
+      - "8080"
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      DOMAIN: ${DOMAIN:?Define DOMAIN en .env (ej. jgtx.tech)}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:
