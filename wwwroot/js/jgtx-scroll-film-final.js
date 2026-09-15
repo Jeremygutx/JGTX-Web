@@ -189,7 +189,11 @@
             video.setAttribute('muted', '');
             video.playsInline = true;
             video.setAttribute('playsinline', '');
-            video.pause();
+            video.load();
+            // Pide reproducción silenciosa para forzar la carga del frame en
+            // móviles (iOS/Android no descargan el video sin gesto del usuario).
+            const starter = video.play();
+            if (starter && typeof starter.catch === 'function') starter.catch(() => { });
             video.addEventListener('loadedmetadata', () => {
                 try { video.currentTime = 0; } catch (_) { }
             });
