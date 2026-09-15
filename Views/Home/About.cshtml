@@ -151,8 +151,10 @@
             if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
             gsap.registerPlugin(ScrollTrigger);
 
+            const mob = window.matchMedia('(max-width: 680px)').matches;
+
             gsap.from('.about-pro-hero-content > *', {
-                y: 45,
+                y: mob ? 24 : 45,
                 opacity: 0,
                 duration: 1,
                 stagger: 0.12,
@@ -180,7 +182,7 @@
             });
 
             gsap.from('.about-pro-mission-visual', {
-                x: -70,
+                x: mob ? 0 : -70,
                 opacity: 0,
                 duration: 1,
                 ease: 'power3.out',
@@ -188,7 +190,7 @@
             });
 
             gsap.from('.about-pro-mission-copy > *', {
-                x: 50,
+                x: mob ? 0 : 50,
                 opacity: 0,
                 duration: .8,
                 stagger: .1,
@@ -198,7 +200,7 @@
 
             gsap.utils.toArray('.about-pro-value-row').forEach((row) => {
                 gsap.from(row, {
-                    y: 35,
+                    y: mob ? 10 : 35,
                     opacity: 0,
                     duration: .7,
                     ease: 'power3.out',
@@ -207,7 +209,7 @@
             });
 
             gsap.from('.about-pro-cta > *', {
-                y: 35,
+                y: mob ? 12 : 35,
                 opacity: 0,
                 duration: .8,
                 stagger: .1,
